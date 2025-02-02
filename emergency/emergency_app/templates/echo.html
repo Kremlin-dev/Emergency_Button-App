@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Echo Test</title>
+</head>
+<body>
+    <h1>WebSocket Echo Test</h1>
+    <input id="messageInput" type="text" placeholder="Type a message" />
+    <button id="sendButton">Send</button>
+    <div id="output"></div>
+
+    <script>
+        // Open a WebSocket connection
+        const socket = new WebSocket('ws://localhost:8000/ws/echo/');
+
+        socket.onopen = function () {
+            console.log("WebSocket connection opened.");
+        };
+
+        socket.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            document.getElementById("output").innerHTML += `<p>Server: ${data.message}</p>`;
+        };
+
+        socket.onclose = function () {
+            console.log("WebSocket connection closed.");
+        };
+
+        document.getElementById("sendButton").onclick = function () {
+            const input = document.getElementById("messageInput");
+            socket.send(input.value);
+            input.value = ""; // Clear input
+        };
+    </script>
+</body>
+</html>
