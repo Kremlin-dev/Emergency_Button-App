@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'emergency_app',
     "rest_framework",
     "rest_framework_simplejwt",
+    "corsheaders",
+    "channels",
 ]
 
 MIDDLEWARE = [
@@ -99,6 +101,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'emergency.wsgi.application'
+ASGI_APPLICATION = 'emergency.asgi.application'
+
 
 CORS_ALLOW_HEADERS = [
     'accept',
