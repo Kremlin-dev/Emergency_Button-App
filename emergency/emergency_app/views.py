@@ -62,8 +62,12 @@ def register(request):
         return JsonResponse({"error": "Invalid Company Code"}, status=400)
     
     if employeeId not in company.get("employeeIds", []):
-        return JsonResponse({"error": "Employee ID not recognized"}, status=400)
-    
+        return JsonResponse({"error": "Employee ID not recognized, Contact your Administrator"}, status=400)
+
+    existing_employee = employee_collection.find_one({"employeeId": employeeId})
+    if existing_employee:
+        return JsonResponse({"error": "Employee ID is already registered"}, status=400)
+
     if employee_collection.find_one({"email": email}):
         return JsonResponse({"error": "User with this email already exists"}, status=400)
     
@@ -115,7 +119,7 @@ def login(request):
     refresh_token = jwt.encode(refresh_payload, settings.SECRET_KEY, algorithm="HS256")
 
     return JsonResponse({
-        "message": "Login successful",
+        "success": "Login successful",
         "access_token": access_token,
         "refresh_token": refresh_token
     }, status=200)
