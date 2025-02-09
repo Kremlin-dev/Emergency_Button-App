@@ -1,5 +1,5 @@
 from django.db import models
-from db_connection import db
+from .db_connection import db
 
 employee_collection = db['Employee']
 company_collection = db['companies']
