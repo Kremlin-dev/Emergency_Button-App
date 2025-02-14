@@ -29,8 +29,8 @@ SECRET_KEY = 'django-insecure-((3w!t3p1u57r&=j6af8@ir^0#0end9xtwnxjj+n49azj$ig1_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*', 'localhost','127.0.0.1','emergencybutton-app-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS=['https://emergencybutton-app-production.up.railway.app']
 
 # Application definition
 
