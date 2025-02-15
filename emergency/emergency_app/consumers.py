@@ -3,11 +3,8 @@ from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from .models import db
 import secrets
 
-
 def generate_secure_id():
     return secrets.randbelow(900000) + 100000  
-
-from datetime import datetime
 
 def parse_datetime(datetime_str):
     try:
@@ -65,7 +62,7 @@ class LocationConsumer(AsyncJsonWebsocketConsumer):
                 new_emergency_id = generate_secure_id()  
 
                 new_emergency = {
-                    "emergencyId": new_emergency_id,
+                    "emergencyId": str(new_emergency_id),
                     "employeeId": employee_id,
                     "companyCode": company_code,
                     "category": category,
@@ -79,7 +76,10 @@ class LocationConsumer(AsyncJsonWebsocketConsumer):
                     self.room_name,
                     {
                         "type": "send_update",
-                        **new_emergency
+                        "emergencyId": new_emergency["emergencyId"],
+                        "employeeId": new_emergency["employeeId"],
+                        "latitude": new_emergency["locations"][-1]["lat"],  
+                        "longitude": new_emergency["locations"][-1]["lng"] 
                     }
                 )
 
@@ -87,10 +87,9 @@ class LocationConsumer(AsyncJsonWebsocketConsumer):
             print(f"Error in receive_json: {e}")
 
     async def send_update(self, event):
-        """Handles outgoing location updates."""
         await self.send_json({
-            "emergencyId": event["emergencyId"],
-            "employeeId": event["employeeId"],
-            "latitude": event["latitude"],
-            "longitude": event["longitude"]
+            "emergencyId": event.get("emergencyId", "N/A"),
+            "employeeId": event.get("employeeId", "N/A"),
+            "latitude": event.get("latitude", 0.0),  
+            "longitude": event.get("longitude", 0.0)
         })
