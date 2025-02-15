@@ -1,0 +1,5 @@
+ Edge Cases
+
+    If a WebSocket disconnects, reconnect automatically.
+    If a user’s phone goes offline, store locations locally and sync when back online.
+    Ensure old emergency sessions are marked as resolved when completed.
