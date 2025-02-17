@@ -1,24 +1,28 @@
+'use client';
+
 import React from "react";
+import Link from "next/link";
 import Text from "./Text";
-import Image from "next/image";
-import { Link } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 interface MediaProps {
-    src: string;
-    alt: string;
-    text: string;
-    link: string;
+  children: React.ReactNode;
+  text: string;
+  link: string;
 }
 
-const Media = ({src, alt, text, link}: MediaProps) => {
+const Media = ({ children, text, link }: MediaProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === `/${link}`;
+
   return (
-    <Link href={`/${link}`}>
-      <Image
-        src={src}
-        alt={alt}
-        width={300}
-        height={100}
-      />
+    <Link
+      href={`/${link}`}
+      className={`flex items-center space-x-2 cursor-pointer transition-colors duration-200 ${
+        isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+      }`}
+    >
+      {children}
       <Text>{text}</Text>
     </Link>
   );
