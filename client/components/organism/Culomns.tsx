@@ -28,27 +28,23 @@ export const columns: ColumnDef<EmergenciesProps>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "subject",
-    header: "Subject",
+    accessorKey: "emergencyId",
+    header: "Emergency ID",
   },
   {
-    accessorKey: "name",
-    header: "Name",
+    accessorKey: "employeeId",
+    header: "Employee ID",
   },
   {
-    accessorKey: "activities",
-    header: "Activities",
+    accessorKey: "category",
+    header: "Category",
   },
   {
     accessorKey: "status",
     header: "Status",
   },
   {
-    accessorKey: "created",
-    header: "Created",
-  },
-  {
-    accessorKey: "sources",
-    header: "Sources",
+    accessorKey: "dateCreated",
+    header: "Date Created",
   },
 ];

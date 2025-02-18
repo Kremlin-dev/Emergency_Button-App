@@ -20,20 +20,21 @@ import {
 import { Button } from "../ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
 
-export function DataTable<TData extends { id: string }, TValue>({
+// Update the generic constraint to include employeeId
+export function DataTable<TData extends { emergencyId: number; employeeId: number }, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [rowSelection, setRowSelection] = useState({});
-  const router = useRouter(); // Initialize router
+  const router = useRouter();
 
   const table = useReactTable({
     data,
@@ -43,7 +44,6 @@ export function DataTable<TData extends { id: string }, TValue>({
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onRowSelectionChange: setRowSelection,
-
     state: {
       columnFilters,
       rowSelection,
@@ -51,14 +51,17 @@ export function DataTable<TData extends { id: string }, TValue>({
   });
 
   return (
-    <main className="bg-white rounded-md px-2">
+    <main className="bg-white rounded-md p-2">
       <section className="flex items-center justify-between">
         <div className="flex items-center py-4">
           <Input
-            placeholder="Filter names..."
-            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+            placeholder="Filter employeeId..."
+            value={
+              // Convert the filter value to a string for display
+              String((table.getColumn("employeeId")?.getFilterValue() ?? ""))
+            }
             onChange={(event) =>
-              table.getColumn("name")?.setFilterValue(event.target.value)
+              table.getColumn("employeeId")?.setFilterValue(event.target.value)
             }
             className="max-w-sm"
           />
@@ -90,7 +93,9 @@ export function DataTable<TData extends { id: string }, TValue>({
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                   className="hover:bg-gray-100 cursor-pointer"
-                  onClick={() => router.push(`/emergencies/${row.original.id}`)} 
+                  onClick={() =>
+                    router.push(`/emergencies/${row.original.emergencyId}`)
+                  }
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
@@ -104,10 +109,7 @@ export function DataTable<TData extends { id: string }, TValue>({
               ))
             ) : (
               <TableRow>
-                <TableCell
-                  colSpan={columns.length}
-                  className="h-24 text-center"
-                >
+                <TableCell colSpan={columns.length} className="h-24 text-center">
                   No results.
                 </TableCell>
               </TableRow>

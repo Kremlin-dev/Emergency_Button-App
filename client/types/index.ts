@@ -1,9 +1,7 @@
 export interface EmergenciesProps {
-    id: number;
-    subject: string;
-    name: string;
-    activities: string;
-    status: "Hot Lead" | "Cold Lead" | "Warm Lead"; 
-    created: string;
-    sources: string;
-  }
+  emergencyId: number;
+  employeeId: number;
+  category: string;
+  status: "Resolved" | "Pending" | "Ongoing"
+  dateCreated: string;
+}
