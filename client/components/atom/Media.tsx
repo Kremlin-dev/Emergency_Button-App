@@ -4,21 +4,15 @@ import Image from "next/image";
 import { Link } from "lucide-react";
 
 interface MediaProps {
-    src: string;
-    alt: string;
+    logo: string;
     text: string;
     link: string;
 }
 
-const Media = ({src, alt, text, link}: MediaProps) => {
+const Media = ({text, link, logo}: MediaProps) => {
   return (
     <Link href={`/${link}`}>
-      <Image
-        src={src}
-        alt={alt}
-        width={300}
-        height={100}
-      />
+       <{logo}/>
       <Text>{text}</Text>
     </Link>
   );
