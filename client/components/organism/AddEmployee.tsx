@@ -12,9 +12,9 @@ function AddEmployee() {
   return (
     <SheetContent className="sm:max-w-[700px] max-h-[700px] overflow-y-scroll">
       <SheetHeader>
-        <SheetTitle>Add Lead</SheetTitle>
+        <SheetTitle>Add Employee</SheetTitle>
         <SheetDescription>
-          Enter the details for the new lead and click Save&quot; when done.
+          Enter the details for the new employee and click Save&quot; when done.
         </SheetDescription>
       </SheetHeader>
 

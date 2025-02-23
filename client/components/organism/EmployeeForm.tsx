@@ -18,8 +18,13 @@ const defaultValues = {
 };
 
 const formData = [
-  { title: "firstName", label: "First Name", type: "text" },
-  { title: "age", label: "Age", type: "number" },
+  { title: "name", label: "Name", type: "text" },
+  { title: "employeeId", label: "Employee ID", type: "number" },
+  { title: "department", label: "Department", type: "text" },
+  { title: "email", label: "Email", type: "email" },
+  { title: "phone", label: "Phone", type: "tel" },
+  { title: "address", label: "Address", type: "text" },
+  { title: "dateOfBirth", label: "Date of Birth", type: "date" },
 ];
 
 const EmployeeForm = () => {

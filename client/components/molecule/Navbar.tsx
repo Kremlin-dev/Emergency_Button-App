@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 import Text from "../atom/Text";
@@ -28,7 +28,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center space-x-2 cursor-pointer">
           <FaUser size={24} />
-          <Text>Profile</Text>
+          <Text>Isaac Amponsah</Text>
         </div>
 
         <div className="md:hidden">
@@ -38,8 +38,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col space-y-2">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out transform ${
+          isOpen ? "scale-y-100 opacity-100 h-auto" : "scale-y-0 opacity-0 h-0"
+        } origin-top`}
+      >
+        <div className="mt-4 flex flex-col gap-y-1 space-y-2 rounded-md">
           <Media text="Emergencies" link="emergencies">
             <MdEmergency size={24} />
           </Media>
@@ -51,10 +55,10 @@ const Navbar = () => {
           </Media>
           <div className="flex items-center space-x-2 cursor-pointer text-white hover:text-blue-400 transition-colors duration-200">
             <FaUser size={24} />
-            <Text>Profile</Text>
+            <Text>Isaac Amponsah</Text>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

@@ -21,17 +21,17 @@ import { Button } from "../ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { IoTimeOutline } from "react-icons/io5";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
 
-// Update the generic constraint to include employeeId
-export function DataTable<TData extends { emergencyId: number; employeeId: number }, TValue>({
-  columns,
-  data,
-}: DataTableProps<TData, TValue>) {
+export function DataTable<
+  TData extends { emergencyId: number; employeeId: string },
+  TValue
+>({ columns, data }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [rowSelection, setRowSelection] = useState({});
   const router = useRouter();
@@ -51,14 +51,13 @@ export function DataTable<TData extends { emergencyId: number; employeeId: numbe
   });
 
   return (
-    <main className="bg-white rounded-md p-2">
-      <section className="flex items-center justify-between">
+    <main className="bg-white rounded-md p-2 w-full">
+      <section className="flex items-center gap-4">
         <div className="flex items-center py-4">
           <Input
-            placeholder="Filter employeeId..."
+            placeholder="Filter by employeeId..."
             value={
-              // Convert the filter value to a string for display
-              String((table.getColumn("employeeId")?.getFilterValue() ?? ""))
+              (table.getColumn("employeeId")?.getFilterValue() as string) ?? ""
             }
             onChange={(event) =>
               table.getColumn("employeeId")?.setFilterValue(event.target.value)
@@ -66,56 +65,65 @@ export function DataTable<TData extends { emergencyId: number; employeeId: numbe
             className="max-w-sm"
           />
         </div>
+
+        <div className="bg-white p-2 shadow-md">
+          <IoTimeOutline className="text-bold cursor-pointer" />
+        </div>
       </section>
 
       <div className="rounded-md border cursor-pointer">
-        <Table>
-          <TableHeader className="bg-gray-200">
-            {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id}>
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                  </TableHead>
-                ))}
-              </TableRow>
-            ))}
-          </TableHeader>
-          <TableBody>
-            {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                  className="hover:bg-gray-100 cursor-pointer"
-                  onClick={() =>
-                    router.push(`/emergencies/${row.original.emergencyId}`)
-                  }
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader className="bg-gray-200">
+              {table.getHeaderGroups().map((headerGroup) => (
+                <TableRow key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <TableHead key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </TableHead>
                   ))}
                 </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell colSpan={columns.length} className="h-24 text-center">
-                  No results.
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
+              ))}
+            </TableHeader>
+            <TableBody>
+              {table.getRowModel().rows?.length ? (
+                table.getRowModel().rows.map((row) => (
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}
+                    className="hover:bg-gray-100 cursor-pointer"
+                    onClick={() =>
+                      router.push(`/emergencies/${row.original.emergencyId}`)
+                    }
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))
+              ) : (
+                <TableRow>
+                  <TableCell
+                    colSpan={columns.length}
+                    className="h-24 text-center"
+                  >
+                    No results.
+                  </TableCell>
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </div>
 
         <section className="flex items-center justify-between space-y-2 py-4 px-4">
           <div className="text-sm text-muted-foreground">
