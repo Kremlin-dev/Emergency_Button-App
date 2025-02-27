@@ -11,6 +11,7 @@ from .authentication import jwt_required
 from django.views.decorators.csrf import csrf_exempt
 import json
 from .consumers import LocationHandler
+from .firebase_config import firebase_db
 
 ##########################
 # REFRESH TOKEEN
@@ -128,52 +129,53 @@ def login(request):
 
 
 @csrf_exempt
-def update_location(request):
+# @jwt_required  
+def report_emergency(request):
+    """
+    Handles a single POST request to report or update an emergency with location data, pushing to Firebase.
+    """
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            response = LocationHandler.process_location_update(data)
-            return JsonResponse(response)
-        except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON data"})
-    
-    return JsonResponse({"error": "Invalid request method"})
+            employee_id = data.get("employeeId")
+            company_code = data.get("companyCode")
+            latitude = data.get("latitude")
+            longitude = data.get("longitude")
+            accuracy = data.get("accuracy")
+            category = data.get("category")
 
-@csrf_exempt
-def resolve_emergency(request):
-    if request.method == "POST":
-        try:
-            data = json.loads(request.body)
-            emergency_id = data.get("emergencyId")
-            status = data.get("status") 
+            if not all([employee_id, company_code, latitude, longitude, accuracy, category]):
+                return JsonResponse({"error": "Missing required fields"}, status=400)
 
-            if not emergency_id or status not in ["resolved", "active"]:
-                return JsonResponse({"error": "Missing emergencyId or invalid status"})
-
-            response = LocationHandler.update_emergency_status(emergency_id, status)
-            return JsonResponse(response)
+            response = LocationHandler.report_emergency(
+                employee_id, company_code, latitude, longitude, accuracy, category
+            )
+            return JsonResponse(response, status=200 if "success" in response else 400)
 
         except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON data"})
+            return JsonResponse({"error": "Invalid JSON data"}, status=400)
 
-    return JsonResponse({"error": "Invalid request method"})
-
+    return JsonResponse({"error": "Invalid request method"}, status=405)
 
 @csrf_exempt
+@jwt_required
 def update_emergency_status(request):
+    """
+    Updates the status of an existing emergency in Firebase.
+    """
     if request.method == "POST":
         try:
             data = json.loads(request.body)
             emergency_id = data.get("emergencyId")
             status = data.get("status")
 
-            if not emergency_id or not status:
-                return JsonResponse({"error": "Missing emergencyId or status"})
+            if not emergency_id or status not in ["active", "resolved"]:
+                return JsonResponse({"error": "Missing emergencyId or invalid status"}, status=400)
 
             response = LocationHandler.update_emergency_status(emergency_id, status)
-            return JsonResponse(response)
+            return JsonResponse(response, status=200 if "success" in response else 400)
 
         except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON data"})
+            return JsonResponse({"error": "Invalid JSON data"}, status=400)
 
-    return JsonResponse({"error": "Invalid request method"})
+    return JsonResponse({"error": "Invalid request method"}, status=405)

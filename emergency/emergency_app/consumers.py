@@ -1,133 +1,102 @@
 import json
 from datetime import datetime
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from bson import json_util
-from firebase_config import db  
-from .models import db as mongo_db  
-
+from firebase_admin import db
+from .models import employee_collection, emergency_collection, company_collection
 import secrets
+from .firebase_config import firebase_db
+
 def generate_secure_id():
-    return secrets.randbelow(900000) + 100000  
-
-def parse_datetime(datetime_str):
-    try:
-        return datetime.strptime(datetime_str, "%Y-%m-%dT%H:%M:%S.%fZ")
-    except ValueError:
-        return datetime.strptime(datetime_str, "%Y-%m-%dT%H:%M:%SZ")
-
-def serialize_mongo_document(doc):
-    doc["_id"] = str(doc["_id"])  
-    return json.loads(json_util.dumps(doc))
+    return secrets.randbelow(900000) + 100000 
 
 class LocationHandler:
     @staticmethod
-    def process_location_update(data):
-        """
-        Handles real-time location updates for active emergencies.
-        """
+    def report_emergency(employee_id, company_code, latitude, longitude, accuracy, category):
+       
         try:
-            employee_id = data.get("employeeId")
-            company_code = data.get("companyCode")
-            latitude = data.get("latitude")
-            longitude = data.get("longitude")
-            category = data.get("category")
-            created_at = data.get("createdAt")
+           
+            employee = employee_collection.find_one({"employeeId": employee_id, "companyCode": company_code})
+            if not employee:
+                return {"error": "Employee not found or company mismatch"}
 
-            if not all([employee_id, company_code, latitude, longitude, category, created_at]):
-                return {"error": "Missing required fields"}
+            existing_emergency = emergency_collection.find_one({
+                "employeeId": employee_id,
+                "status": "active",
+                "category": category
+            })
 
-            latitude = float(latitude)
-            longitude = float(longitude)
+            print(existing_emergency)
 
-            emergency = mongo_db["emergency"].find_one({"employeeId": employee_id, "status": "active"})
-
-            if emergency:
-                if emergency["status"] == "resolved":
-                    return {"message": "Emergency already resolved"}
-
-                mongo_db["emergency"].update_one(
-                    {"_id": emergency["_id"]},
-                    {"$push": {"locations": {"lat": latitude, "lng": longitude}}}
+            if existing_emergency:
+                emergency_id = existing_emergency["emergencyId"]
+                update_data = {
+                    "location": {"lat": latitude, "lng": longitude, "accuracy": accuracy},
+                    "updatedAt": datetime.utcnow().isoformat()
+                }
+                emergency_collection.update_one(
+                    {"emergencyId": emergency_id},
+                    {"$set": update_data}
                 )
 
-                ref = db.reference(f"emergencies/{emergency['emergencyId']}/locations")
-                ref.push({
-                    "lat": latitude,
-                    "lng": longitude,
-                    "timestamp": datetime.utcnow().isoformat()
-                })
+                firebase_ref = db.reference(f"emergencies/{employee_id}/{emergency_id}")
+                firebase_ref.update(update_data)
 
-                return {"success": "Location update added to active emergency"}
-
+                updated_emergency = emergency_collection.find_one({"emergencyId": emergency_id})
+                updated_emergency.pop("_id")  
+                return {
+                    "success": f"Updated existing {category} emergency",
+                    "emergency": updated_emergency
+                }
             else:
-                new_emergency_id = generate_secure_id()
-
+                emergency_id = str(generate_secure_id())
                 new_emergency = {
-                    "emergencyId": str(new_emergency_id),
+                    "emergencyId": emergency_id,
                     "employeeId": employee_id,
                     "companyCode": company_code,
                     "category": category,
                     "status": "active",
-                    "locations": [{"lat": latitude, "lng": longitude}],
-                    "createdAt": parse_datetime(created_at).isoformat()
+                    "location": {"lat": latitude, "lng": longitude, "accuracy": accuracy},
+                    "createdAt": datetime.utcnow().isoformat()
                 }
 
-                result = mongo_db["emergency"].insert_one(new_emergency)
-                new_emergency["_id"] = str(result.inserted_id)
+                emergency_collection.insert_one(new_emergency)
 
-                ref = db.reference(f"emergencies/{new_emergency_id}")
-                ref.set(new_emergency)
+                firebase_ref = db.reference(f"emergencies/{employee_id}/{emergency_id}")
+                firebase_ref.set(new_emergency)
 
-                return {"success": "New emergency created"}
+                new_emergency.pop("_id", None)
+                return {"success": "Emergency reported successfully", "emergency": new_emergency}
 
         except Exception as e:
-            return {"error": f"Error processing location: {str(e)}"}
+            return {"error": f"Error reporting emergency: {str(e)}"}
 
     @staticmethod
     def update_emergency_status(emergency_id, status):
-        """
-        Updates the emergency status (resolved or active) for a given emergency ID.
-        """
+      
         try:
-            emergency = mongo_db["emergency"].find_one({"emergencyId": emergency_id})
-
+            emergency = emergency_collection.find_one({"emergencyId": emergency_id})
+            print(emergency)
             if not emergency:
                 return {"error": "Emergency not found"}
 
-            mongo_db["emergency"].update_one(
+            if emergency["status"] == status:
+                return {"error": f"Emergency is already {status}"}
+
+            update_data = {"status": status, "updatedAt": datetime.utcnow().isoformat()}
+            if status == "resolved":
+                update_data["resolvedAt"] = datetime.utcnow().isoformat()
+
+            emergency_collection.update_one(
                 {"emergencyId": emergency_id},
-                {"$set": {"status": status, "updatedAt": datetime.utcnow().isoformat()}}
+                {"$set": update_data}
             )
 
-            ref = db.reference(f"emergencies/{emergency_id}")
-            ref.update({"status": status, "updatedAt": datetime.utcnow().isoformat()})
+            employee_id = emergency["employeeId"]
+            firebase_ref = db.reference(f"emergencies/{employee_id}/{emergency_id}")
+            firebase_ref.update(update_data)
 
-            return {"success": f"Emergency status updated to {status}"}
+            updated_emergency = emergency_collection.find_one({"emergencyId": emergency_id})
+            updated_emergency.pop("_id")
+            return {"success": f"Emergency status updated to {status}", "emergency": updated_emergency}
 
         except Exception as e:
             return {"error": f"Error updating emergency status: {str(e)}"}
-
-    @staticmethod
-    def resolve_emergency(emergency_id):
-        """
-        Resolves a specific emergency by its emergencyId.
-        """
-        try:
-            emergency = mongo_db["emergency"].find_one({"emergencyId": emergency_id, "status": "active"})
-
-            if not emergency:
-                return {"error": "No active emergency found"}
-
-            mongo_db["emergency"].update_one(
-                {"emergencyId": emergency_id},
-                {"$set": {"status": "resolved", "resolvedAt": datetime.utcnow().isoformat()}}
-            )
-
-            ref = db.reference(f"emergencies/{emergency_id}")
-            ref.update({"status": "resolved", "resolvedAt": datetime.utcnow().isoformat()})
-
-            return {"success": "Emergency resolved successfully"}
-
-        except Exception as e:
-            return {"error": f"Error resolving emergency: {str(e)}"}
