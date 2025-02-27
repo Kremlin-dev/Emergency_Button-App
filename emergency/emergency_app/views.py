@@ -8,7 +8,9 @@ import jwt
 from datetime import datetime, timedelta, timezone
 from django.conf import settings
 from .authentication import jwt_required
-
+from django.views.decorators.csrf import csrf_exempt
+import json
+from .consumers import LocationHandler
 
 ##########################
 # REFRESH TOKEEN
@@ -123,3 +125,55 @@ def login(request):
         "access_token": access_token,
         "refresh_token": refresh_token
     }, status=200)
+
+
+@csrf_exempt
+def update_location(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            response = LocationHandler.process_location_update(data)
+            return JsonResponse(response)
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data"})
+    
+    return JsonResponse({"error": "Invalid request method"})
+
+@csrf_exempt
+def resolve_emergency(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            emergency_id = data.get("emergencyId")
+            status = data.get("status") 
+
+            if not emergency_id or status not in ["resolved", "active"]:
+                return JsonResponse({"error": "Missing emergencyId or invalid status"})
+
+            response = LocationHandler.update_emergency_status(emergency_id, status)
+            return JsonResponse(response)
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data"})
+
+    return JsonResponse({"error": "Invalid request method"})
+
+
+@csrf_exempt
+def update_emergency_status(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            emergency_id = data.get("emergencyId")
+            status = data.get("status")
+
+            if not emergency_id or not status:
+                return JsonResponse({"error": "Missing emergencyId or status"})
+
+            response = LocationHandler.update_emergency_status(emergency_id, status)
+            return JsonResponse(response)
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data"})
+
+    return JsonResponse({"error": "Invalid request method"})

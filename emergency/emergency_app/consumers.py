@@ -1,8 +1,12 @@
+import json
 from datetime import datetime
-from channels.generic.websocket import AsyncJsonWebsocketConsumer
-from .models import db
-import secrets
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from bson import json_util
+from firebase_config import db  
+from .models import db as mongo_db  
 
+import secrets
 def generate_secure_id():
     return secrets.randbelow(900000) + 100000  
 
@@ -12,16 +16,16 @@ def parse_datetime(datetime_str):
     except ValueError:
         return datetime.strptime(datetime_str, "%Y-%m-%dT%H:%M:%SZ")
 
-class LocationConsumer(AsyncJsonWebsocketConsumer):
-    async def connect(self):
-        self.room_name = "location_updates"
-        await self.channel_layer.group_add(self.room_name, self.channel_name)
-        await self.accept()
+def serialize_mongo_document(doc):
+    doc["_id"] = str(doc["_id"])  
+    return json.loads(json_util.dumps(doc))
 
-    async def disconnect(self, close_code):
-        await self.channel_layer.group_discard(self.room_name, self.channel_name)
-
-    async def receive_json(self, data):
+class LocationHandler:
+    @staticmethod
+    def process_location_update(data):
+        """
+        Handles real-time location updates for active emergencies.
+        """
         try:
             employee_id = data.get("employeeId")
             company_code = data.get("companyCode")
@@ -31,35 +35,33 @@ class LocationConsumer(AsyncJsonWebsocketConsumer):
             created_at = data.get("createdAt")
 
             if not all([employee_id, company_code, latitude, longitude, category, created_at]):
-                return  
+                return {"error": "Missing required fields"}
 
             latitude = float(latitude)
             longitude = float(longitude)
 
-            emergency = db["emergency"].find_one({"employeeId": employee_id, "status": "active"})
+            emergency = mongo_db["emergency"].find_one({"employeeId": employee_id, "status": "active"})
 
             if emergency:
                 if emergency["status"] == "resolved":
-                    return  
+                    return {"message": "Emergency already resolved"}
 
-                db["emergency"].update_one(
+                mongo_db["emergency"].update_one(
                     {"_id": emergency["_id"]},
                     {"$push": {"locations": {"lat": latitude, "lng": longitude}}}
                 )
 
-                await self.channel_layer.group_send(
-                    self.room_name,
-                    {
-                        "type": "send_update",
-                        "emergencyId": emergency["emergencyId"],  
-                        "employeeId": employee_id,
-                        "latitude": latitude,
-                        "longitude": longitude
-                    }
-                )
+                ref = db.reference(f"emergencies/{emergency['emergencyId']}/locations")
+                ref.push({
+                    "lat": latitude,
+                    "lng": longitude,
+                    "timestamp": datetime.utcnow().isoformat()
+                })
+
+                return {"success": "Location update added to active emergency"}
 
             else:
-                new_emergency_id = generate_secure_id()  
+                new_emergency_id = generate_secure_id()
 
                 new_emergency = {
                     "emergencyId": str(new_emergency_id),
@@ -70,26 +72,62 @@ class LocationConsumer(AsyncJsonWebsocketConsumer):
                     "locations": [{"lat": latitude, "lng": longitude}],
                     "createdAt": parse_datetime(created_at).isoformat()
                 }
-                db["emergency"].insert_one(new_emergency)
 
-                await self.channel_layer.group_send(
-                    self.room_name,
-                    {
-                        "type": "send_update",
-                        "emergencyId": new_emergency["emergencyId"],
-                        "employeeId": new_emergency["employeeId"],
-                        "latitude": new_emergency["locations"][-1]["lat"],  
-                        "longitude": new_emergency["locations"][-1]["lng"] 
-                    }
-                )
+                result = mongo_db["emergency"].insert_one(new_emergency)
+                new_emergency["_id"] = str(result.inserted_id)
+
+                ref = db.reference(f"emergencies/{new_emergency_id}")
+                ref.set(new_emergency)
+
+                return {"success": "New emergency created"}
 
         except Exception as e:
-            print(f"Error in receive_json: {e}")
+            return {"error": f"Error processing location: {str(e)}"}
 
-    async def send_update(self, event):
-        await self.send_json({
-            "emergencyId": event.get("emergencyId", "N/A"),
-            "employeeId": event.get("employeeId", "N/A"),
-            "latitude": event.get("latitude", 0.0),  
-            "longitude": event.get("longitude", 0.0)
-        })
+    @staticmethod
+    def update_emergency_status(emergency_id, status):
+        """
+        Updates the emergency status (resolved or active) for a given emergency ID.
+        """
+        try:
+            emergency = mongo_db["emergency"].find_one({"emergencyId": emergency_id})
+
+            if not emergency:
+                return {"error": "Emergency not found"}
+
+            mongo_db["emergency"].update_one(
+                {"emergencyId": emergency_id},
+                {"$set": {"status": status, "updatedAt": datetime.utcnow().isoformat()}}
+            )
+
+            ref = db.reference(f"emergencies/{emergency_id}")
+            ref.update({"status": status, "updatedAt": datetime.utcnow().isoformat()})
+
+            return {"success": f"Emergency status updated to {status}"}
+
+        except Exception as e:
+            return {"error": f"Error updating emergency status: {str(e)}"}
+
+    @staticmethod
+    def resolve_emergency(emergency_id):
+        """
+        Resolves a specific emergency by its emergencyId.
+        """
+        try:
+            emergency = mongo_db["emergency"].find_one({"emergencyId": emergency_id, "status": "active"})
+
+            if not emergency:
+                return {"error": "No active emergency found"}
+
+            mongo_db["emergency"].update_one(
+                {"emergencyId": emergency_id},
+                {"$set": {"status": "resolved", "resolvedAt": datetime.utcnow().isoformat()}}
+            )
+
+            ref = db.reference(f"emergencies/{emergency_id}")
+            ref.update({"status": "resolved", "resolvedAt": datetime.utcnow().isoformat()})
+
+            return {"success": "Emergency resolved successfully"}
+
+        except Exception as e:
+            return {"error": f"Error resolving emergency: {str(e)}"}

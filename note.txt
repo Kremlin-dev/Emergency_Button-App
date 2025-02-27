@@ -3,3 +3,16 @@
     If a WebSocket disconnects, reconnect automatically.
     If a user’s phone goes offline, store locations locally and sync when back online.
     Ensure old emergency sessions are marked as resolved when completed.
+
+
+     Firebase Database Path:
+
+    All emergencies: /emergencies/
+    Specific emergency details: /emergencies/{emergencyId}/
+    Live location updates: /emergencies/{emergencyId}/locations/
+
+React Dashboard:
+
+    Subscribe to /emergencies/{emergencyId}/locations/ to track movements in real-time.
+    Listen for status changes (active → resolved) on /emergencies/{emergencyId}/.
+
