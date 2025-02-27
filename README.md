@@ -4,3 +4,4 @@ mongodb+srv://Kremlin:ch5BDbt8xwWLL59f>@kremlin.cx70k.mongodb.net/?retryWrites=t
 mongodb+srv://Kremlin:ch5BDbt8xwWLL59f@kremlin.cx70k.mongodb.net/
 
 (ws://Kremlin.pythonanywhere.com/ws/location/) 
+source ~/.virtualenvs/venv/bin/activate

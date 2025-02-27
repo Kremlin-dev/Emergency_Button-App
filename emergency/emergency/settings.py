@@ -29,10 +29,8 @@ SECRET_KEY = 'django-insecure-((3w!t3p1u57r&=j6af8@ir^0#0end9xtwnxjj+n49azj$ig1_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'localhost','127.0.0.1','emergencybutton-app-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS=['https://emergencybutton-app-production.up.railway.app']
-
 # Application definition
+ALLOWED_HOSTS = ["kremlin.pythonanywhere.com", "localhost", "127.0.0.1"]
 
 INSTALLED_APPS = [
      "daphne",
@@ -50,13 +48,35 @@ INSTALLED_APPS = [
    
 ]
 
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels_redis.core.RedisChannelLayer",
+#         "CONFIG": {
+#             "hosts": [("127.0.0.1", 6379)],  
+#         },
+#     },
+# }
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],  
+            "hosts": [
+                "rediss://default:AVNS_4EKv_4L3u2i8t2DRzaR@valkey-2f6cd49b-kremlin-0fab.d.aivencloud.com:14268"
+            ]
         },
     },
+}
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "rediss://default:AVNS_4EKv_4L3u2i8t2DRzaR@valkey-2f6cd49b-kremlin-0fab.d.aivencloud.com:14268",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "SSL": True,  
+        }
+    }
 }
 
 MIDDLEWARE = [
@@ -71,8 +91,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-
-
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -81,6 +99,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 }
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
@@ -110,10 +129,8 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'emergency.wsgi.application'
 ASGI_APPLICATION = 'emergency.asgi.application'
-
 
 CORS_ALLOW_HEADERS = [
     'accept',
@@ -139,7 +156,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -158,8 +174,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -170,7 +184,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
