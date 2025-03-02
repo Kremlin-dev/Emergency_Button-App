@@ -121,10 +121,19 @@ def login(request):
     }
     refresh_token = jwt.encode(refresh_payload, settings.SECRET_KEY, algorithm="HS256")
 
+    employee_data = {
+        "firstname": employee.get("firstname"),
+        "lastname": employee.get("lastname"),
+        "employeeId": employee.get("employeeId"),
+        "email": employee.get("email"),
+        "companyCode": employee.get("companyCode")
+    }
+
     return JsonResponse({
         "success": "Login successful",
         "access_token": access_token,
-        "refresh_token": refresh_token
+        "refresh_token": refresh_token,
+        "employee": employee_data
     }, status=200)
 
 
