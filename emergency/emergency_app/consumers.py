@@ -20,7 +20,7 @@ class LocationHandler:
             employee = employee_collection.find_one({"employeeId": employee_id, "companyCode": company_code})
             if not employee:
                 logger.error("Employee not found or company mismatch")
-                return {"error": "Employee not found or company mismatch"}
+                return {"error": "Employee not found or company mismatch", "reqState": False}
 
             company = company_collection.find_one({"companyCode": company_code})
             phone_number = None
@@ -40,7 +40,6 @@ class LocationHandler:
                 existing_emergency["_id"] = str(existing_emergency["_id"])  
                 logger.info(f"Existing emergency found: {existing_emergency}")
 
-            if existing_emergency:
                 emergency_id = existing_emergency["emergencyId"]
                 update_data = {
                     "location": {"lat": latitude, "lng": longitude, "accuracy": accuracy},
@@ -60,7 +59,8 @@ class LocationHandler:
 
                 return {
                     "success": f"Updated existing {category} emergency",
-                    "emergency": updated_emergency
+                    "emergency": updated_emergency,
+                    "reqState": True
                 }
             else:
                 emergency_id = str(generate_secure_id())
@@ -73,7 +73,6 @@ class LocationHandler:
                     "phone": phone_number, 
                     "location": {"lat": latitude, "lng": longitude, "accuracy": accuracy},
                     "createdAt": datetime.utcnow().isoformat(),
-                    "reqState": True
                 }
 
                 insert_result = emergency_collection.insert_one(new_emergency)
@@ -86,7 +85,7 @@ class LocationHandler:
 
                 new_emergency.pop("_id", None)  
 
-                return {"success": "Emergency reported successfully", "emergency": new_emergency}
+                return {"success": "Emergency reported successfully", "emergency": new_emergency, "reqState": True}
 
         except Exception as e:
             logger.error(f"Error in report_emergency: {str(e)}", exc_info=True)

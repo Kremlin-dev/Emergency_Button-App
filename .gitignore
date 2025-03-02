@@ -2,4 +2,5 @@ venv
 insert.py
 db_connection.py
 AGADBCSVo.csv
-node_modules
+node_modulesnode_modules/
+.next/
