@@ -6,7 +6,6 @@ import secrets
 import logging
 from bson import ObjectId
 
-# Configure logging
 logger = logging.getLogger(__name__)
 
 def generate_secure_id():
