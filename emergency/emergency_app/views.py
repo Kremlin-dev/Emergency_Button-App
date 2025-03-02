@@ -92,7 +92,6 @@ def register(request):
 @permission_classes([AllowAny])
 def login(request):
     data = request.data
-
     employeeId = data.get('employeeId')
     password = data.get('password')
 
@@ -106,6 +105,14 @@ def login(request):
 
     if not bcrypt.checkpw(password.encode('utf-8'), employee['password'].encode('utf-8')):
         return JsonResponse({"error": "Invalid Employee ID or password"}, status=401)
+
+    company = company_collection.find_one({"companyCode": employee["companyCode"]})
+    phone_number = None
+    if company:
+        for emp in company.get("employees", []):
+            if emp["employeeId"] == employeeId:
+                phone_number = emp.get("phone", None)
+                break
 
     access_payload = {
         "employeeId": employeeId,
@@ -121,19 +128,16 @@ def login(request):
     }
     refresh_token = jwt.encode(refresh_payload, settings.SECRET_KEY, algorithm="HS256")
 
-    employee_data = {
-        "firstname": employee.get("firstname"),
-        "lastname": employee.get("lastname"),
-        "employeeId": employee.get("employeeId"),
-        "email": employee.get("email"),
-        "companyCode": employee.get("companyCode")
-    }
-
     return JsonResponse({
         "success": "Login successful",
+        "employeeId": employeeId,
+        "firstname": employee["firstname"],
+        "lastname": employee["lastname"],
+        "companyCode": employee["companyCode"],
+        "email": employee["email"],
+        "phone": phone_number, 
         "access_token": access_token,
-        "refresh_token": refresh_token,
-        "employee": employee_data
+        "refresh_token": refresh_token
     }, status=200)
 
 
