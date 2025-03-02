@@ -72,7 +72,8 @@ class LocationHandler:
                     "status": "active",
                     "phone": phone_number, 
                     "location": {"lat": latitude, "lng": longitude, "accuracy": accuracy},
-                    "createdAt": datetime.utcnow().isoformat()
+                    "createdAt": datetime.utcnow().isoformat(),
+                    "reqState": True
                 }
 
                 insert_result = emergency_collection.insert_one(new_emergency)
@@ -89,4 +90,4 @@ class LocationHandler:
 
         except Exception as e:
             logger.error(f"Error in report_emergency: {str(e)}", exc_info=True)
-            return {"error": f"Error reporting emergency: {str(e)}"}
+            return {"error": f"Error reporting emergency: {str(e)}", "reqState": False}

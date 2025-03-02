@@ -57,22 +57,28 @@ def register(request):
     password = data.get('password')
 
     if not all([firstname, lastname, employeeId, email, companyCode, password]):
-        return JsonResponse({"error": "All fields are required"}, status=400)
+        return JsonResponse({"error": "All fields are required", "reqState": False}, status=400)
 
     company = company_collection.find_one({'companyCode': companyCode})
 
     if not company:
-        return JsonResponse({"error": "Invalid Company Code"}, status=400)
+        return JsonResponse({"error": "Invalid Company Code", "reqState": False}, status=400)
 
-    if employeeId not in company.get("employeeIds", []):
-        return JsonResponse({"error": "Employee ID not recognized, Contact your Administrator"}, status=400)
+    matched_employee = None
+    for emp in company.get("employees", []):
+        if emp["employeeId"] == employeeId:
+            matched_employee = emp
+            break
+
+    if not matched_employee:
+        return JsonResponse({"error": "Employee ID not recognized. Contact your Administrator", "reqState": False}, status=400)
 
     existing_employee = employee_collection.find_one({"employeeId": employeeId})
     if existing_employee:
-        return JsonResponse({"error": "Employee ID is already registered"}, status=400)
+        return JsonResponse({"error": "Employee ID is already registered", "reqState": False}, status=400)
 
     if employee_collection.find_one({"email": email}):
-        return JsonResponse({"error": "User with this email already exists"}, status=400)
+        return JsonResponse({"error": "User with this email already exists", "reqState": False}, status=400)
 
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
 
@@ -86,7 +92,8 @@ def register(request):
     }
     employee_collection.insert_one(employeeData)
 
-    return JsonResponse({"success": "Signup successful"}, status=200)
+    return JsonResponse({"success": "Signup successful", "reqState": True}, status=200)
+
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -96,15 +103,15 @@ def login(request):
     password = data.get('password')
 
     if not employeeId or not password:
-        return JsonResponse({"error": "Employee ID and password are required"}, status=400)
+        return JsonResponse({"error": "Employee ID and password are required", "reqState": False}, status=400)
 
     employee = employee_collection.find_one({"employeeId": employeeId})
 
     if not employee:
-        return JsonResponse({"error": "Invalid Employee ID or password"}, status=401)
+        return JsonResponse({"error": "Invalid Employee ID or password", "reqState": False}, status=401)
 
     if not bcrypt.checkpw(password.encode('utf-8'), employee['password'].encode('utf-8')):
-        return JsonResponse({"error": "Invalid Employee ID or password"}, status=401)
+        return JsonResponse({"error": "Invalid Employee ID or password", "reqState": False}, status=401)
 
     company = company_collection.find_one({"companyCode": employee["companyCode"]})
     phone_number = None
@@ -137,8 +144,10 @@ def login(request):
         "email": employee["email"],
         "phone": phone_number, 
         "access_token": access_token,
-        "refresh_token": refresh_token
+        "refresh_token": refresh_token,
+        "reqState": True
     }, status=200)
+
 
 
 @csrf_exempt
