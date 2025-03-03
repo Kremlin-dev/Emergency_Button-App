@@ -24,7 +24,10 @@ class LocationHandler:
 
             company = company_collection.find_one({"companyCode": company_code})
             phone_number = None
+            company_name = None  #
+
             if company:
+                company_name = company.get("companyName", "Unknown Company")  
                 for emp in company.get("employees", []):
                     if emp["employeeId"] == employee_id:
                         phone_number = emp.get("phone", None)
@@ -57,6 +60,8 @@ class LocationHandler:
                 updated_emergency["_id"] = str(updated_emergency["_id"])  
                 updated_emergency.pop("_id", None)
 
+                updated_emergency["companyName"] = company_name
+
                 return {
                     "success": f"Updated existing {category} emergency",
                     "emergency": updated_emergency,
@@ -67,7 +72,7 @@ class LocationHandler:
                 new_emergency = {
                     "emergencyId": emergency_id,
                     "employeeId": employee_id,
-                    "companyCode": company_code,
+                    "companyName": company_name,  
                     "category": category,
                     "status": "active",
                     "phone": phone_number, 
