@@ -124,3 +124,23 @@ export const employeeList = [
     email: "johnDoe@gmail.com",
   },
 ]
+
+export const emergencyData = [
+  { id: 1, name: "Kwame Asante", lat: 6.6885, lng: -1.6244 }, // Adum
+  { id: 2, name: "Ama Boateng", lat: 6.7156, lng: -1.6328 }, // Bantama
+  { id: 3, name: "Yaw Mensah", lat: 6.6794, lng: -1.6211 }, // Asafo
+  { id: 4, name: "Akosua Owusu", lat: 6.6912, lng: -1.6300 }, // Ahodwo
+  { id: 5, name: "Kofi Owusu", lat: 6.6708, lng: -1.6221 }, // Anloga
+  { id: 6, name: "Efua Agyeman", lat: 6.6918, lng: -1.6227 }, // Amakom
+  { id: 7, name: "Kojo Antwi", lat: 6.6731, lng: -1.6239 }, // Asokwa
+  { id: 8, name: "Mawuli Dodzi", lat: 6.6896, lng: -1.6138 }, // Nhyiaeso
+  { id: 9, name: "Felicia Osei", lat: 6.7033, lng: -1.6258 }, // Suame
+  { id: 10, name: "Emmanuel Frimpong", lat: 6.6765, lng: -1.6313 }, // Oforikrom
+  { id: 11, name: "Sandra Appiah", lat: 6.7174, lng: -1.6131 }, // Tafo
+  { id: 12, name: "Samuel Boadu", lat: 6.6643, lng: -1.6217 }, // Atonsu
+  { id: 13, name: "Grace Gyamfi", lat: 6.6956, lng: -1.6098 }, // Kwadaso
+  { id: 14, name: "Prince Opoku", lat: 6.6975, lng: -1.6345 }, // Kentinkrono
+  { id: 15, name: "Linda Yeboah", lat: 6.6813, lng: -1.6191 }, // Sofoline
+];
+
+
