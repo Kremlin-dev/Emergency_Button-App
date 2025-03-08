@@ -153,9 +153,7 @@ def login(request):
 @csrf_exempt
 # @jwt_required  
 def report_emergency(request):
-    """
-    Handles a single POST request to report or update an emergency with location data, pushing to Firebase.
-    """
+    
     if request.method == "POST":
         try:
             data = json.loads(request.body)
@@ -182,9 +180,7 @@ def report_emergency(request):
 @csrf_exempt
 # @jwt_required
 def update_emergency_status(request):
-    """
-    Updates the status of an existing emergency in Firebase.
-    """
+   
     if request.method == "POST":
         try:
             data = json.loads(request.body)
