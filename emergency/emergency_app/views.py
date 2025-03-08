@@ -202,8 +202,6 @@ def update_emergency_status(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
-
-
 ############
 @csrf_exempt
 def add_work_note(request):
@@ -242,3 +240,5 @@ def add_work_note(request):
             return JsonResponse({"error": str(e)}, status=500)
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
+
+
