@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import employee_collection, company_collection
+from .models import employee_collection, company_collection, emergency_collection
 from django.http import JsonResponse
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
@@ -180,7 +180,7 @@ def report_emergency(request):
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
 @csrf_exempt
-@jwt_required
+# @jwt_required
 def update_emergency_status(request):
     """
     Updates the status of an existing emergency in Firebase.
@@ -199,5 +199,46 @@ def update_emergency_status(request):
 
         except json.JSONDecodeError:
             return JsonResponse({"error": "Invalid JSON data"}, status=400)
+
+    return JsonResponse({"error": "Invalid request method"}, status=405)
+
+
+
+############
+@csrf_exempt
+def add_work_note(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            emergency_id = data.get("emergencyId")
+            note = data.get("note")
+
+            if not emergency_id or not note:
+                return JsonResponse({"error": "Missing emergencyId or note"}, status=400)
+
+            work_note = {
+                "note": note,
+                "timestamp": datetime.utcnow().isoformat()
+            }
+
+            emergency_collection.update_one(
+                {"emergencyId": emergency_id},
+                {"$push": {"workNotes": {"$each": [work_note], "$position": 0}}}
+            )
+
+            updated_emergency = emergency_collection.find_one(
+                {"emergencyId": emergency_id}, {"workNotes": 1, "_id": 0}
+            )
+
+            return JsonResponse({
+                "success": "Work note added successfully",
+                "workNotes": updated_emergency.get("workNotes", [])
+            }, status=200)
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data"}, status=400)
+
+        except Exception as e:
+            return JsonResponse({"error": str(e)}, status=500)
 
     return JsonResponse({"error": "Invalid request method"}, status=405)

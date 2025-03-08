@@ -95,3 +95,24 @@ class LocationHandler:
         except Exception as e:
             logger.error(f"Error in report_emergency: {str(e)}", exc_info=True)
             return {"error": f"Error reporting emergency: {str(e)}", "reqState": False}
+        
+    @staticmethod
+    def update_emergency_status(emergency_id, status):
+        try:
+            emergency = emergency_collection.find_one({"emergencyId": emergency_id})
+
+            if not emergency:
+                return {"error": "Emergency not found", "reqState": False}
+
+            emergency_collection.update_one(
+                {"emergencyId": emergency_id},
+                {"$set": {"status": status, "updatedAt": datetime.utcnow().isoformat()}}
+            )
+
+            firebase_ref = db.reference(f"emergencies/{emergency['employeeId']}/{emergency_id}")
+            firebase_ref.update({"status": status, "updatedAt": datetime.utcnow().isoformat()})
+
+            return {"success": "Emergency status updated", "reqState": True}
+
+        except Exception as e:
+            return {"error": f"Error updating status: {str(e)}", "reqState": False}
