@@ -44,6 +44,8 @@ def refresh_token(request):
 
 #####################################################################################################
 
+#REGISTER USER
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register(request):
@@ -94,7 +96,7 @@ def register(request):
 
     return JsonResponse({"success": "Signup successful", "reqState": True}, status=200)
 
-
+#LOGIN USER
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login(request):
@@ -149,7 +151,7 @@ def login(request):
     }, status=200)
 
 
-
+#REPORT EMERGENCY
 @csrf_exempt
 # @jwt_required  
 def report_emergency(request):
@@ -177,6 +179,8 @@ def report_emergency(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
+
+#UPDATE EMERGENCY STATUS
 @csrf_exempt
 # @jwt_required
 def update_emergency_status(request):
@@ -199,6 +203,7 @@ def update_emergency_status(request):
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
 ############
+# ADD WORK NOTES
 @csrf_exempt
 def add_work_note(request):
     if request.method == "POST":
