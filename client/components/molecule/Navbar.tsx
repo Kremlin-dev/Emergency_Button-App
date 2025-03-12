@@ -21,9 +21,9 @@ const Navbar = () => {
           <Media text="Analytics" link="analytics">
             <MdAnalytics size={24} />
           </Media>
-          <Media text="Employees" link="employees">
+          {/* <Media text="Employees" link="employees">
             <MdPeople size={24} />
-          </Media>
+          </Media> */}
         </div>
 
         <div className="hidden md:flex items-center space-x-2 cursor-pointer">
