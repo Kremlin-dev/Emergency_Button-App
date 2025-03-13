@@ -24,7 +24,7 @@ class LocationHandler:
 
             company = company_collection.find_one({"companyCode": company_code})
             phone_number = None
-            company_name = None  #
+            company_name = None  
 
             if company:
                 company_name = company.get("companyName", "Unknown Company")  
@@ -53,13 +53,12 @@ class LocationHandler:
                     {"$set": update_data}
                 )
 
-                firebase_ref = db.reference(f"emergencies/{employee_id}/{emergency_id}")
+                firebase_ref = db.reference(f"emergencies/{emergency_id}")
                 firebase_ref.update(update_data)
 
                 updated_emergency = emergency_collection.find_one({"emergencyId": emergency_id})
                 updated_emergency["_id"] = str(updated_emergency["_id"])  
                 updated_emergency.pop("_id", None)
-
                 updated_emergency["companyName"] = company_name
 
                 return {
@@ -85,7 +84,7 @@ class LocationHandler:
 
                 logger.info(f"Inserted into MongoDB with _id: {new_emergency['_id']}")
 
-                firebase_ref = db.reference(f"emergencies/{employee_id}/{emergency_id}")
+                firebase_ref = db.reference(f"emergencies/{emergency_id}")
                 firebase_ref.set(new_emergency)
 
                 new_emergency.pop("_id", None)  
@@ -109,7 +108,7 @@ class LocationHandler:
                 {"$set": {"status": status, "updatedAt": datetime.utcnow().isoformat()}}
             )
 
-            firebase_ref = db.reference(f"emergencies/{emergency['employeeId']}/{emergency_id}")
+            firebase_ref = db.reference(f"emergencies/{emergency_id}")
             firebase_ref.update({"status": status, "updatedAt": datetime.utcnow().isoformat()})
 
             return {"success": "Emergency status updated", "reqState": True}

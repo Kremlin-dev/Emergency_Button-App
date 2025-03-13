@@ -243,3 +243,37 @@ def add_work_note(request):
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
 
+
+# RESET PASSWORD
+@csrf_exempt
+def reset_password(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            employee_id = data.get("employeeId")
+            new_password = data.get("newPassword")
+
+            if not employee_id or not new_password:
+                return JsonResponse({"error": "Employee ID and new password are required", "reqState": False}, status=400)
+
+            employee = employee_collection.find_one({"employeeId": employee_id})
+
+            if not employee:
+                return JsonResponse({"error": "Employee ID not found", "reqState": False}, status=404)
+
+            hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+            employee_collection.update_one(
+                {"employeeId": employee_id},
+                {"$set": {"password": hashed_password}}
+            )
+
+            return JsonResponse({"success": "Password reset successful", "reqState": True}, status=200)
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data", "reqState": False}, status=400)
+
+        except Exception as e:
+            return JsonResponse({"error": str(e), "reqState": False}, status=500)
+
+    return JsonResponse({"error": "Invalid request method", "reqState": False}, status=405)

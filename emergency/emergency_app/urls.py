@@ -10,4 +10,5 @@ urlpatterns = [
     path('emergency/report/', views.report_emergency, name='report_emergency'),
     path('emergency/update-status/', views.update_emergency_status, name='update_emergency_status'),
     path('work-notes/', views.add_work_note, name='add-work-note'),
+    path('reset-password/', views.reset_password, name='Reset Password'),
 ]
