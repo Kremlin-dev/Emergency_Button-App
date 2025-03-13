@@ -52,7 +52,6 @@ export default function EmergencyMap() {
     return () => off(emergenciesRef, "value", unsubscribe);
   }, []);
 
-  console.log("hello", emergencies);
 
   return (
     <div className="h-screen w-full relative">
@@ -84,6 +83,8 @@ export default function EmergencyMap() {
                   >
                     <p className="font-bold">{incident.companyName}</p>
                     <p>Category: {incident.category}</p>
+                    <p>Phone: {incident.phone}</p>
+                    <p>Status: {incident.status}</p>
                   </div>
                 </Popup>
               </Marker>
