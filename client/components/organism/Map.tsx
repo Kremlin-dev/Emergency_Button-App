@@ -6,10 +6,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { database } from "@/config/firebaseConfig";
-import { ref, onValue } from "firebase/database";
+import { ref, onValue, off } from "firebase/database";
 import { Emergency } from "@/types";
 
-// Function to create icons using an online URL
 const createIcon = (color: string) =>
   new L.Icon({
     iconUrl: `/${color}-marker.png`,
@@ -32,23 +31,25 @@ export default function EmergencyMap() {
   useEffect(() => {
     const emergenciesRef = ref(database, "emergencies");
 
-    onValue(emergenciesRef, (snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.val();
-        const formattedEmergencies: Emergency[] = [];
-
-        for (const employeeId in data) {
-          for (const emergencyId in data[employeeId]) {
-            formattedEmergencies.push({
-              id: emergencyId,
-              ...data[employeeId][emergencyId],
-            });
-          }
-        }
-
-        setEmergencies(formattedEmergencies);
+    const unsubscribe = onValue(emergenciesRef, (snapshot) => {
+      if (!snapshot.exists()) {
+        setEmergencies([]);
+        return;
       }
+
+      const data = snapshot.val();
+
+      const formattedEmergencies: Emergency[] = Object.entries(data).map(
+        ([emergencyId, details]: any) => ({
+          id: emergencyId,
+          ...details,
+        })
+      );
+
+      setEmergencies(formattedEmergencies);
     });
+
+    return () => off(emergenciesRef, "value", unsubscribe);
   }, []);
 
   console.log("hello", emergencies);
@@ -56,30 +57,41 @@ export default function EmergencyMap() {
   return (
     <div className="h-screen w-full relative">
       <MapContainer
-        center={[6.1872951, -1.6922085]}
+        center={[6.1799848, -1.6776174]}
         zoom={13}
         className="h-full w-full"
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-        {emergencies.map((incident) => (
-          <Marker
-            key={incident._id}
-            position={[incident.location?.lat, incident.location?.lng]}
-            icon={createIcon(categoryColors[incident.category])}
-          >
-            <Popup>
-              <div
-                onClick={() => router.push(`/emergencies/${incident._id}`)}
-                className="text-sm"
+        {emergencies.map((incident) => {
+          if (!incident.location?.lat || !incident.location?.lng) return null;
+
+          return (
+            <div key={incident._id}>
+              <Marker
+                key={incident.emergencyId}
+                position={[incident.location?.lat, incident.location?.lng]}
+                icon={createIcon(
+                  categoryColors[incident.category.trim()] || "blue"
+                )}
               >
-                <p className="font-bold">{incident.companyName}</p>
-                <p>Category: {incident.category}</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+                <Popup>
+                  <div
+                    onClick={() =>
+                      router.push(`/emergencies/${incident?.emergencyId}`)
+                    }
+                    className="text-sm cursor-pointer"
+                  >
+                    <p className="font-bold">{incident.companyName}</p>
+                    <p>Category: {incident.category}</p>
+                  </div>
+                </Popup>
+              </Marker>
+            </div>
+          );
+        })}
+      </MapContainer> 
+
     </div>
   );
 }
