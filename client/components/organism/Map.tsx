@@ -71,7 +71,7 @@ export default function EmergencyMap() {
                 key={incident.emergencyId}
                 position={[incident.location?.lat, incident.location?.lng]}
                 icon={createIcon(
-                  categoryColors[incident.category.trim()] || "blue"
+                  categoryColors[incident.category?.trim()] || "blue"
                 )}
               >
                 <Popup>
