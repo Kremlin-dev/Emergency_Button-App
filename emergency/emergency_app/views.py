@@ -277,3 +277,5 @@ def reset_password(request):
             return JsonResponse({"error": str(e), "reqState": False}, status=500)
 
     return JsonResponse({"error": "Invalid request method", "reqState": False}, status=405)
+
+
