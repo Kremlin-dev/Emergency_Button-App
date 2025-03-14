@@ -305,6 +305,7 @@ def admin_login(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
+
 @admin_required
 def get_company_employees(request, company_code):
     if request.method == "GET":
