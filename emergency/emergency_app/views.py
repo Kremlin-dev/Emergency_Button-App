@@ -12,6 +12,9 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from .consumers import LocationHandler
 from .firebase_config import firebase_db
+from django.contrib.auth import login, logout
+from django.contrib.sessions.models import Session
+from .decorators import admin_required 
 
 ##########################
 # REFRESH TOKEEN
@@ -182,9 +185,9 @@ def report_emergency(request):
 
 #UPDATE EMERGENCY STATUS
 @csrf_exempt
-# @jwt_required
+@csrf_exempt
+@admin_required
 def update_emergency_status(request):
-   
     if request.method == "POST":
         try:
             data = json.loads(request.body)
@@ -242,8 +245,6 @@ def add_work_note(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
-
-
 # RESET PASSWORD
 @csrf_exempt
 def reset_password(request):
@@ -278,4 +279,51 @@ def reset_password(request):
 
     return JsonResponse({"error": "Invalid request method", "reqState": False}, status=405)
 
+@csrf_exempt
+def admin_login(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            company_code = data.get("companyCode")
+            password = data.get("password")
 
+            if not company_code or not password:
+                return JsonResponse({"error": "Company code and password are required"}, status=400)
+
+            company = company_collection.find_one({"companyCode": company_code})
+
+            if not company or not bcrypt.checkpw(password.encode('utf-8'), company["password"].encode('utf-8')):
+                return JsonResponse({"error": "Invalid company code or password"}, status=401)
+
+            request.session["admin_company_code"] = company_code
+            request.session["is_admin"] = True
+
+            return JsonResponse({"success": "Login successful", "companyCode": company_code, "companyName": company["companyName"]}, status=200)
+
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON data"}, status=400)
+
+    return JsonResponse({"error": "Invalid request method"}, status=405)
+
+@admin_required
+def get_company_employees(request, company_code):
+    if request.method == "GET":
+        company = company_collection.find_one(
+            {"companyCode": company_code}, {"employees": 1, "_id": 0}
+        )
+
+        if not company:
+            return JsonResponse({"error": "Company not found"}, status=404)
+
+        employees = company.get("employees", [])
+
+        registered_ids = set(
+            emp["employeeId"] for emp in employee_collection.find({}, {"employeeId": 1})
+        )
+
+        for emp in employees:
+            emp["registered"] = emp["employeeId"] in registered_ids
+
+        return JsonResponse({"employees": employees}, status=200)
+
+    return JsonResponse({"error": "Invalid request method"}, status=405)
