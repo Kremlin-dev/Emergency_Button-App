@@ -1,0 +1,861 @@
+﻿No.,Name,Department,Email,Employee ID,Job Title,Phone
+1,"Aacht, Prince",Engineering,PAacht@aga.gold,30038494,Mechanical Technician-Material Handling, 
+2,"Ababio, Nicholas Karikari",Engineering,NAbabio@aga.gold,30037931,Mechanical Technician - Material Handling, 
+3,"Abagna, Desmond Aduko",Mine Planning & Technical,daabagna@aga.gold,30045417,Mine Planning Engineer,0547492637
+4,"abalem, john mark",Security,jmabalem@aga.gold,30034854,Security Supervisor Operations,0556776890
+5,"Abban, Gloria",Engineering,GAbban@aga.gold,30045033,Graduate Trainee,0593489088
+6,"Abdul Karim, Issah",Engineering,AKarim@aga.gold,30034948,Engineering Supervisor - Dewatering,0257957527
+7,"abdulai , joseph",Engineering,jabdulai@aga.gold,30034833,Mechanical Technician - SMI,+233  244792207
+8,"Abebrese, Peter Nyarko",Processing,PAbebrese@aga.gold,30037452,Paste Plant Control Room Supervisor, 
+9,"Abekah, John",Safety & Health,JAbekah@aga.gold,30034973,Fire Tender Driver, 
+10,"Abeyie, George Bonsu",Engineering,GAbeyie@aga.gold,30036657,Mechanical Superintendent – Process Plant,0531003739
+11,"Aboagye, Bernard",Engineering,BAboagye@aga.gold,30035061,Power Station Technician,+233  243854938
+12,"Aboagye, Prince",Sustainability,PAboagye@aga.gold,30037798,Community Engagement Officer,0531008214
+13,"Aboagye, Samuel",Engineering,SAboagye@aga.gold,30036257,Electrical Supervisor - Surface,0257957905
+14,"Abrefa, Russell Kwame",Human Resources,RAbrefa@aga.gold,30036054,Housing Officer,0559730847
+15,ABuadi,Finance & Commercial,ABuadi@aga.gold,30034812,Senior Manager - Finance & Commercial,+233 244 339110
+16,"Abubakar, Halisu",Engineering,HAbubakar@aga.gold,30037778,Underground Dewatering Operator, 
+17,"abubakari, adams",Security,abu.adams@aga.gold,30034993,Security Guard - JAMOT,0556776881
+18,"Abugri, Hadiatu",Human Resources,HAbugri@aga.gold,30043117,Human Resources Officer,0593962692
+19,"Abugyansa, Nancy Apiagyei",Geology,NAAbugyansa@aga.gold,30047253,Graduate Trainee,0240795357
+20,"Acheampong, Edward",Human Resources,EAcheampong@aga.gold,30035985,Time and Attendance Officer, 
+21,"Acheampong, Linda Ofori",Geology,LAcheampong@aga.gold,30036607,Chief Geologist - Resource Evaluation,0559718710
+22,"Ackah, James",Mining,James.Ackah@aga.gold,30040219,Blastman, 
+23,"Ackah, Paul",Engineering,Packah@aga.gold,30036352,Senior Maintenance Planner - Underground,0559718715
+24,"Ackam, Roseline",Human Resources,RAckam@aga.gold,30039083,HR Officer,0596914117
+25,"Ackon, Charles Kwame",Engineering,CAckon@aga.gold,30034998,Winder Engine Driver, 
+26,"Acquaah, Emmanuel Lartey",Engineering,EAcquaah@aga.gold,30041256,Technical Writer,0257997402
+27,"Acquaah, Gideon Okweesi",Human Resources,GAcquaah@aga.gold,30035786,Training & Development Superintendent,0552570461
+28,"Acquah, Emmanuel",Safety & Health,Emmanuel.Acquah@aga.gold,30041612,Fire and Rescue Brigadesman, 
+29,"Acquah, Frederick Assan",Engineering,FAcquah@aga.gold,30038490,Mechanical Technician - SMI,+233  549418092
+30,"Acquah, Isaac Kofi",Engineering,IKAcquah@aga.gold,30037069,Operator-Primary Vent Fans&Fridge Plant, 
+31,"Acquah, Ishmael Maxwell",Engineering,IMAcquah@aga.gold,30037275,Instrumentation Technician - Winders,+233  244260411
+32,"Acquah, Obed",Engineering,Obed.Acquah@aga.gold,30036629,Electrical Technician, 
+33,"Acquah, Prince",Engineering,PAcquah@aga.gold,30037170,Mechanical Technician - Winders, 
+34,"Acquah, Solomon",Engineering,SAcquah@aga.gold,30039564,Shaft Maintenance Technician, 
+35,"Acquah, Stephen",Engineering,Stephen.Acquah@aga.gold,30042574,Engineering Supervisor-Lifting Equipment & Trucks,0257997343
+36,"Adabo, Martin",Engineering,MAdabo@aga.gold,30037274,CIC Technician - UG, 
+37,"adade-boateng, david",IM,dboateng@aga.gold,30034882,Senior Specialist – Environment Projects,0559669953
+38,"Adams, Mohammed Osman",Mining,Mohammed.Adams@aga.gold,30037187,Mine Captain - Production,0247967421
+39,"Addai, Akosua Amoabeng",Shared Services,AAddai@aga.gold,30041616,Front Desk / Receptionist,+233 249341682
+40,"Addai, Patrick",Engineering,PAddai@aga.gold,30035030,Engineering Manager – SMI,0244419556
+41,"addai, robert",Engineering,robert.addai@aga.gold,30034829,Principal Engineer – Operational Technology,0552570787
+42,"Addison, Desmond",Capital Project,DAddison@aga.gold,30035612,Commercial & Procurement Specialist,0552569640
+43,"Adiyia, Daniel Adjei",Engineering,DAAdiyia@aga.gold,30040993,Maintenance Planning Superintendent,0593806325
+44,"Adiyiah, Francisca Ofori",Engineering,FAdiyiah@aga.gold,30037752,Underground Dewatering Operator, 
+45,"Adiyiah, Peter Ofori",Engineering,PAdiyiah@aga.gold,30038753,Mechanical Technician - Process Plant, 
+46,"Adjakofi, Christian",Engineering,CAdjakofi@aga.gold,30040737,Electrical Technician - UG, 
+47,"Adjei, Bismark Anane",Engineering,BAAdjei@aga.gold,30037799,Undergroud Dewatering Operator, 
+48,"adjei, emmanuel",Finance & Commercial,eAdjei@aga.gold,30034874,Superintendent-Budgets & Management Accounts,233 50 1568200
+49,"Adjei, Gideon",Engineering,Gideon.Adjei@aga.gold,30037383,Instrumentation Technician - Winders, 
+50,"Adjei, Opoku Ampofo",Finance & Commercial,OAdjei@aga.gold,30036346,Accounts Officer,0593804187
+51,"Adjei, Rodger Tetteh",Digital Technology,RTAdjei@aga.gold,30037832,IT Field Support Engineer,0595860053
+52,"Adjei, Samuel",Human Resources,sam.adjei@aga.gold,30034922,Chief Cook/ Steward, 
+53,"Adjei, Samuel (Skip Handler)",Mining,SAAdjei@aga.gold,30040225,Skip Handler, 
+54,"Adoma Boadi, Sandra",Security,SABoadi@aga.gold,30046482,Security Supervisor - Investigations, 
+55,"Adomako, Irene",Geology,IAdomako@aga.gold,30047180,Graduate Trainee,2.33553E+11
+56,"Adomako, Kofi",Engineering,KAdomako@aga.gold,30043569,CIC Technician - Process Plant, 
+57,"Adomako, Lawrence",Engineering,LAdomako@aga.gold,30042515,Fabricator - UG, 
+58,"Adongo, Marcarius",Engineering,MAdongo@aga.gold,30041666,Mechanical Technician - Dewatering, 
+59,"adu asamoah, richard",Processing,raduasamoah@aga.gold,30034887,Senior Metallurgist-Projects,0596913882
+60,"Adu, Emmanuel",Engineering,EAdu@aga.gold,30037108,Engineering Training Officer, 
+61,"Adu, Philip",Geology,PAdu@aga.gold,30034912,Core Yard Technician, 
+62,"Aduful, Isaac",Engineering,IAduful@aga.gold,30034971,Electrical Technician - Underground,+233  243458862
+63,"Adu-Gyamfi, Emmanuel",Engineering,Emma.Adu-Gyamfi@aga.gold,30037802,Underground Dewatering Operator, 
+64,"Adu-Gyamfi, Ernest",Engineering,EAdu-Gyamfi@aga.gold,30034963,Mechanical Technician,244291509
+65,"Aduomi, Grace Nyarko",Mine Planning & Technical,gaduomi@aga.gold,30042355,Graduate Trainee, 
+66,"Adu-Poku, Akosua Durowaa",Human Resources,AAdu-Poku@aga.gold,30035448,Human Resources Officer,0552727616
+67,"Adusei, Alexander",Engineering,AAdusei@aga.gold,30035043,Maintenance Planner - Shutdown,0594036008
+68,"Adusei, Rita",Engineering,RAdusei@aga.gold,30037469,Laboratory Technologist, 
+69,"Afari, Samuel Yaw",Engineering,SYAfari@aga.gold,30043976,Mechanical Technician – PasteFill,0557338987
+70,"Afari, Theresah Amoh",Engineering,TAAfari@aga.gold,30047157,Graduate Trainee,0532506662
+71,"afari-baah, samson",Mining,samson.afari-baah@aga.gold,30035025,Mine Manager - GCS Complex,0559670086
+72,"Afenu, Carl Sena",Environment,CAfenu@anglogoldashanti.com,30036971,Environmental Officer - GIS, 
+73,"Affrim, Kelvin P.",Safety & Health,KAffrim@aga.gold,30036815,Safety Superintendent-Surface,0593799398
+74,"Afful, Augustus Nana",Engineering,AAfful@aga.gold,30038342,CIC Technician - UG, 
+75,"Afful, Matthew",Engineering,MAfful@aga.gold,30041720,Mechanical Technician-Shaft Maintenance, 
+76,afia konadu,Shared Services,akonadu2@aga.gold,30034796,Financial Accountant - PHU,+233 24 4388287
+77,"Afoakwa, Kwadwo Obeng",Finance & Commercial,KAfoakwa@aga.gold,30036572,Materials Engineering Specialist,0257958220
+78,"Afoakwah, Prince",Engineering,PAfoakwah@aga.gold,30037604,Boiler Maker - LV&UG Trackless Equipment, 
+79,"Afoaquah, Emmanuel",Engineering,EAfoaquah@aga.gold,30037259,Electrical & Instrumentation Supervisor - Pastefill, 
+80,"Afornyepome, Bright",Engineering,BAfornyepome@aga.gold,30039826,Winder Engine Driver, 
+81,"Afrakomah, Hannah",Sustainability,HAfrakomah@aga.gold,30036053,Community Relations Officer-Social Dev&G,0559680586
+82,"Afreh, Charles Cletus",Engineering,CAfreh@aga.gold,30037537,Lamp room attendant, 
+83,"Afreh, Oscar Aboagye",Finance & Commercial,OAboagye@aga.gold,30036626,Warehouse Officer, 
+84,AFrey,Management,AFrey@aga.gold,30035512,Head of Operations,+27 78 4577175 / +233 552 559470
+85,"Afrifah, Dolly",Capital Project,DAfrifah@aga.gold,30036361,Buyer,0257957788
+86,"Afriyie, Daniel Owusu Snr",Engineering,Afryie@aga.gold,30036577,Auto Electrician Technician, 
+87,"Afriyie, Theresa Owusu",Safety & Health,TAfriyie@aga.gold,30037428,Safety Officer Systems, 
+88,"Agbadzi, David Owusu",Security,DAgbadzi@aga.gold,30038099,Security Supervisor - Operations,0593841832
+89,"Agbedige, Francis",Engineering,FAgbedige@aga.gold,30040487,Mechanical Technician - SMI, 
+90,"Aggrey, Enock Senior",Engineering,ESAggrey@aga.gold,30043975,Mechanical Technician – PasteFill,0246766872
+91,"Aggrey-Fynn, Nana Adjoa Egyirba",Shared Services,naeaggrey-fynn@aga.gold,30047418,Intern,+233 248499124
+92,"Ago-Nortey, Richard",Environment,RAgo-Nortey@aga.gold,30041793,Environmental Officer - EMS, 
+93,"Agudze-Tordzro, Andrews",Engineering,AAgudze-Tordzro@aga.gold,30039074,Mechanical Supervisor - Pastefill, 
+94,"Agyapong, Augustine",Engineering,AAgyapong@aga.gold,30046936,Condition Monitoring Technician, 
+95,"Agyapong, Elizabeth Ansomaa",Capital Project,EAgyapong@aga.gold,30043434,Cost Control Officer,0244350556
+96,"agyare, adams",Processing,aagyare@aga.gold,30034847,Processing Operations Sectional Lead,0257997365
+97,"Agyei Boakye, Felix",Safety & Health,FABoakye@aga.gold,30047328,Safety Officer– Mobile Equipment & Traffic Management, 
+98,"Agyei, Nicholina Ohemaa Afriyie Anane",Mining,NOAAAgyei@aga.gold,30045009,Graduate Trainee,0543426418
+99,"Agyei, Samuel Asante",Engineering,SAAgyei@aga.gold,30041210,Mechanical Technician - Paste Fill & Material Handler, 
+100,"Agyei, Williams",Geology,WAgyei@aga.gold,30037171,Mapping Geologist, 
+101,"agyekum, dominic o.",Engineering,dagyekum@aga.gold,30034823,Mechanical Superintendent - Winders & Shafts,0559681580
+102,"Agyekum, Ruffina",Geology,RAgyekum@aga.gold,30038020,Underground Technician, 
+103,"Agyekum, Vincent",Mining,VAgyekum@aga.gold,30040224,Skip Handler, 
+104,"Agyeman, George",Mine Planning & Technical,GAgyeman@aga.gold,30035611,Ventilation Engineer,0559862949
+105,"Agyemang, Anita",Engineering,aagyemang@aga.gold,30036349,Maintenance Planner Data Clerk, 
+106,"Agyemang, Belinda",Processing,BAgyemang@aga.gold,30037670,Laboratory Operator,  
+107,"Agyemang, Bridget Ofori",Mining,BOAgyemang@aga.gold,30043703,Material Handler, 
+108,"Agyemang, Clement Besesun",Security,CBAgyemang@aga.gold,30035064,Security Superintendent - Operations,0556758515
+109,"Agyemang, Owusu Bempah",Finance & Commercial,OBAgyemang@aga.gold,30036007,Warehouse Superintendent,0559862842
+110,"Agyen-Mensah, Sarah",Engineering,SAMensah@aga.gold,30036241,CIC Supervisor - Surface,0245458152
+111,"Agyepong, Franklin",Geology,FAgyepong@anglogoldashanti.com,30035073,Senior Geologist - Logging & Projects,0559681636
+112,"Ahegbebu, Frank",Shared Services,FAhegbebu@aga.gold,30037401,Asset Management Lead,0552703464
+113,"Ahensah, Eric",Engineering,EAhensah@aga.gold,30037186,Mechanical Technician - Winders, 
+114,"Aheto, Dodge Kwame",Engineering,DAheto@aga.gold,30041209,Tyre Maintenance Technician, 
+115,"Ahmed, Sulley Mustapha",Engineering,SMAhmed@aga.gold,30038544,CIC Technician - SMI, 
+116,"Ahomah, Frank",Engineering,FAhomah@aga.gold,30038506,UG Dewatering Operator, 
+117,"Ainoo, Christabel",Geology,CAinoo@aga.gold,30045288,Geologist - Database & QAQC,0541098786
+118,"Akomah, Isaac Sakyi",Environment,ISAkomah@aga.gold,30039891,Environmental Monitoring Technician, 
+119,"Akoto, Esther Agyeiwaa",Sustainability,EAAkoto@aga.gold,30043867,Social Development Officer,0531011973
+120,"akoto, ishmael",Engineering,iakoto@aga.gold,30034834,Engineering Supervisor,0257997258
+121,"Akpanya, Emmanuel Kojo",Geology,EAkpanya@aga.gold,30038018,Underground Technician, 
+122,"Akuffo, Michael",Engineering,MAkuffo@aga.gold,30043673,Electrical & Instrumentation Shift Supervisor, 
+123,"Akwaboah, George",Processing,GAkwaboah@aga.gold,30038747,Plant Operator, 
+124,"Akwaboah, Idun Nana",Engineering,IAkwaboah@aga.gold,30037262,Mechanical Technician - SMI, 
+125,Albert Quagraine,Shared Services,aquagraine@aga.gold,30034802,Senior Ports Officer,+233  541923587
+126,"Alhassan, Azara",Processing,AAlhassan@aga.gold,30038776,Plant Operator, 
+127,"alhassan, osman",Environment,osman.alhassan@aga.gold,30034850,Closure/Forestry Officer,0559689272
+128,"Alormeney, Seraphina",Geology,SAlormeney@anglogoldashanti.com,30042151,Senior Geologist - Exploration, 
+129,"Alupungu, Louisa Wesono",Project Services & BI,LAlupungu@aga.gold,30036251,Document Control Officer,  055674778
+130,"Amakye, Mathew",Engineering,MAmakye@aga.gold,30042263,UG Dewatering Operator, 
+131,"Amankwa, Aaron Asare",Engineering,AAmankwa@aga.gold,30039031,Mechanical Technician - Winders, 
+132,"Amanor, Patrick Lartey",Engineering,PAmanor@aga.gold,30036358,E&I Superintendent-UG, 
+133,"Amanor, Yaw Adufo",Processing,YAmanor@aga.gold,30041888,Paste Plant Laboratory Technician / Sampler, 
+134,"Amegbor, Joseph Komla",Digital Technology,JAmegbor@aga.gold,30035614,IT Field Support Engineer,0593860048
+135,"Amenshiah, Michael Kwesi",Mining,MAmenshiah@aga.gold,30043671,Shiftboss,0594061007
+136,"Amenu, George",Engineering,GAmenu@aga.gold,30039825,Mechanical Technician - Process Plant, 
+137,"Amenyitor, Philip",Engineering,PAmenyitor@aga.gold,30037076,Operator, 
+138,"Ameyaw, Felix Kwakye",Human Resources,FKAmeyaw@aga.gold,30044968,Housing Clerk, 
+139,"Amissah, Michael K.",Finance & Commercial,MAmissah@aga.gold,30036077,Warehouse Officer, 
+140,"Amo Oduro, Godfred",Finance & Commercial,GAmoOduro@aga.gold,30035060,Warehouse Officer,0257958185
+141,"amoah amponsah, alex",Engineering,alex.amoahamponsah@aga.gold,30034983,Electrical Technician,+233  243842166
+142,"Amoah, Benjamin",Engineering,BAmoah@aga.gold,30034894,Mechanical Technician - Underground,+233  244918672
+143,"Amoah, Bismark",Mining,Bismark.Amoah@aga.gold,30037406,Contracts Engineer, 
+144,"amoah, frank",Mining,famoah2@aga.gold,30035033,Mining Specialist,0544312657
+145,"amoah, stephen",Processing,stephen.amoah@aga.gold,30034869,Water Management Supervisor,0596913881
+146,"Amoah, Stephen Kofi",Engineering,SKAmoah@aga.gold,30037541,Lamp Room Attendant, 
+147,"Amoako, Eric Adu",Engineering,EAAmoako@aga.gold,30039626,Mechanical Technician - Process Plant, 
+148,"Amoako, Prince Agyemang",Safety & Health,PAAmoako@aga.gold,30044615,Safety Officer - Mobile Equipment & Traffic Mgt, 
+149,"Amoako, Rutherford",Engineering,Rutherford.Amoako@aga.gold,30042433,Reliability Engineer - Fleet,0593891184
+150,"Amoanyi, Isaac",Environment,IAmoanyi@aga.gold,30044989,Graduate Trainee,0240328416
+151,"Amoasah, Samuel",Engineering,SAmoasah@aga.gold,30036891,Electrical Supervisor - Process Plant,0593862975
+152,"Amoateng, Cecilia",Digital Technology,CAmoateng@aga.gold,30047237,National Service Person,0547513183
+153,"Amoateng, Elvis",Safety & Health,EAmoateng@aga.gold,30034895,Safety Officer, 
+154,"Amoatey, George",Digital Technology,GAmoatey@aga.gold,30035748,IT Field Support Engineer,0593860028
+155,"Amofah, Shedrack",Engineering,SAmofah@aga.gold,30039319,Fabricator - Process Plant, 
+156,"Amo-Mensah, Akua Sarpong",Finance & Commercial,AAmo-Mensah@aga.gold,30036147,Accounts Officer,0593811961
+157,"Amoo, Jeffrey Nii Darko",Finance & Commercial,JAmoo@aga.gold,30034817,Warehouse Officer,0257958087
+158,"Ampofo, Dominic",Engineering,DAmpofo@aga.gold,30034974,Electrical Technician - Underground,+233  244998547
+159,"Ampofo, Francis",Engineering,FAmpofo@aga.gold,30037379,Electrical Technician - Winders,+233  024613760
+160,"Ampofo, Obed",Processing,OAmpofo@aga.gold,30038338,Paste Plant Shift Supervisor,0593811969
+161,"Amponfi, Theodorah Ekua",Capital Project,TAmponfi@aga.gold,30043229,Graduate Trainee, 
+162,"Ampong, Michael",Engineering,MAmpong@aga.gold,30043493,Electrical Technician - Process Plant, 
+163,"Amponsah, Isaac",Processing,IAmponsah@aga.gold,30037432,Laboratory Operator, 
+164,"Amponsah, Isaac Yaw",Digital Technology,IYAmponsah@aga.gold,30047281,National Service Person,0558507341
+165,"Amponsah, Moses Kwame",Engineering,MKAmponsah@aga.gold,30037080,Driver, 
+166,"Amponsah, Obed Akwasi",Engineering,OAmponsah@aga.gold,30036254,Electrical Supervisor - EEM, 
+167,"Amponsah, Prince",Mine Planning & Technical,PAmponsah@aga.gold,30045133,Survey Superintendent,0246139520
+168,"ampoty, david",Safety & Health,dampoty@aga.gold,30034821,Safety Superintendent - Underground,0556582934
+169,"Anaba, Theodora Adele-Yine",Engineering,TA-YAnaba@aga.gold,30044993,Graduate Trainee,0553594602
+170,"Anakari, Frank",Geology,FAnakari@aga.gold,30038019,Underground Technician, 
+171,"Anaman, David Clint",Engineering,David.Anaman@aga.gold,30041190,Maintenance Specialist,0559680980
+172,"Anane, Emmanuel Kofi",Capital Project,EKAnane@aga.gold,30043286,Graduate Trainee,0531011018
+173,"Anderson, Abraham Ekow",Engineering,AEAnderson@aga.gold,30037261,CIC Technician - Process Plant, 
+174,"anderson, jonathan",Shared Services,janderson@aga.gold,30034892,System Support Analyst -  SAP PM,0559863057
+175,"Anderson, Koduah Amenfi",Mining,KAAnderson@aga.gold,30038481,Blastman, 
+176,"Andoh, Abigail",Processing,AAndoh@aga.gold,30045031,Graduate Trainee, 
+177,"Andoh, Calvert Martin",Engineering,CAndoh@aga.gold,30038550,CIC Technician - SMI, 
+178,"Andoh, Eric Kris",Engineering,EKAndoh@aga.gold,30042003,Electrical Technician - Process Plant, 
+179,"Andoh, Fredrick Kweku",Engineering,FAndoh@aga.gold,30037386,Electrical Technician - Underground,  
+180,"Anen, Michael Van",Mine Planning & Technical,MVAnen@aga.gold,30043731,Senior Manager: Special Initiatives, 
+181,"Angu, John",Engineering,JAngu@aga.gold,30034961,Mechanical Technician,+233  244935255
+182,"Aniagyei, Winfred",Engineering,WAniagyei@aga.gold,30035999,Technical Writer,0559681625
+183,"Anim, Nicodemus",Mining,NAnim@aga.gold,30037972,Surface Works Supervisor,0241387280
+184,"Anim-Sackey, Papa Danso",Shared Services,pdanim-sackey@aga.gold,30047262,National Service Person,+233  552422112
+185,"Ankobiah, Emmanuel Nana",Engineering,EAnkobiah@aga.gold,30042027,Mechanical Technician – Process Plant,  
+186,"Ankomah, Alex Harrison",Safety & Health,Alex.Ankomah@aga.gold,30042325,Fire and Rescue Brigadesman, 
+187,"Ankomah, Magdalene Ansomaa",Safety & Health,MAAnkomah@aga.gold,30043734,Fire and Rescue Brigadesperson, 
+188,"Ankomah, William",Capital Project,WAnkomah@aga.gold,30039561,Shaft Engineer, 233 0257997313
+189,"Ankrah, Jobbse Nyamekye",Geology,JNAnkrah@aga.gold,30044975,Graduate Trainee,2.33556E+11
+190,"Annan, Festus Alexis",Processing,FAnnan@aga.gold,30039069,Control Room Lead,+233 553 589154
+191,"Annan, Joe-Steve",Safety & Health,JSAnnan@aga.gold,30035936,Senior Manager – Safety and Health,0559863084
+192,"Annohene, Kwabena",Engineering,KAnnohene@aga.gold,30044997,Engineering Systems Officer, 
+193,"Anokye, Juanita Brewuah",Processing,JAnokye@aga.gold,30041678,Metallurgist, 
+194,"Anokye-Gyimah, Stephen",Project Services & BI,SAnokye-Gyimah@aga.gold,30044528,Project Scheduler,0531033002
+195,"Ansah, Evans Owusu",Geology,EAnsah@aga.gold,30036712,Scheduler, 
+196,"Ansah, Jennifer Delmina",Finance & Commercial,Jennifer.Ansah@aga.gold,30042681,Commodity Lead – Chemicals & Bulk Consum,0257997397
+197,"Ansah, John Essuman",Engineering,JEAnsah@aga.gold,30041355,CIC Supervisor - Winders,0257997290
+198,"Ansah, Matthew Owusu",Engineering,MOAnsah@aga.gold,30041718,Electrical Technician - Process Plant, 
+199,"Ansah, Solomon Owusu",Safety & Health,soansah@aga.gold,30043211,Occupational Hygienist,0544958958
+200,"Anti, Nana Yaa Damtewaa",Engineering,NYDAnti@aga.gold,30045018,Graduate Trainee,0541000292
+201,"antwi, collins",Shared Services,cantwi@aga.gold,30034809,Ports Officer,+233 242645175
+202,"Antwi, Daniel Kofi",Engineering,DKAntwi@aga.gold,30036658,Engineering Superintendent - Infrastructure & Projects,0552659440
+203,"antwi, david",Engineering,david.antwi@aga.gold,30034990,Senior Winder Engine Driver,0257997321
+204,"Antwi, Dickson Adomako",Engineering,DAAntwi@aga.gold,30037829,Fabricator - Process Plant, 
+205,"Antwi, Grace",Mining,Grace.Antwi@aga.gold,30040218,Skip Handler, 
+206,"antwi, isaac",Digital Technology,iantwi@aga.gold,30035012,Senior Specialist: Business Analysis,0244335562
+207,"Anyan, Collins",Engineering,CAnyan@aga.gold,30035903,Tower Crane Rigger, 
+208,"Apeku, Benedicta",Geology,BApeku@aga.gold,30037403,Logging & Modelling Geologist, 
+209,"Appeasah, Emmanuel",Processing,EAppeasah@aga.gold,30045053,Graduate Trainee,0247010279
+210,"Appiagyei, Godslove Anane",Mine Planning & Technical,GAAppiagyei@aga.gold,30045274,Graduate Surveyor,0557018090
+211,"Appiah Ennin, Seth Joe",Engineering,SJAppiahEnnin@aga.gold,30045023,Graduate Trainee,0546952325
+212,"Appiah, Dominic",Engineering,Dominic.Appiah@aga.gold,30044010,CIC Technician Paste Fill,0541525427
+213,"Appiah, Eric",Engineering,Eric.Appiah@aga.gold,30039483,Electrical Technician - UG, 
+214,"Appiah, Joyce",Engineering,Joyce.Appiah@aga.gold,30037782,Underground Dewatering Operator, 
+215,"Appiah, Justice",Safety & Health,JAppiah@aga.gold,30047283,Health and Safety Data Analyst, 
+216,"Appiah, Nancy",Engineering,NAppiah@aga.gold,30037399,Control Room Lead-SI & Electrical,0531033776
+217,"Appiah, Rita Adwoa",Mining,raappiah@aga.gold,30045293,Graduate Trainee, 
+218,"Appiah, Sampson",Safety & Health,Sappiah@aga.gold,30044432,Safety Officer - Underground, 
+219,"Appiah-Kubi, Alexander",Engineering,AAppiah-Kubi@aga.gold,30035002,Electrical Supervisor - Underground,0593804269
+220,"Appiah-Takyi, Ernest Kojo",Mine Planning & Technical,EAppiah-Takyi@aga.gold,30047162,Graduate Trainee, 
+221,Araba Attua-Afari,Shared Services,AAttua-Afari@aga.gold,30042609,Head Of Legal & Company Secretary: Ghana,+233 26 7288824
+222,"Archer, Ebenezer",Engineering,EAcher@aga.gold,30041341,Winder Electrical Engineer,0559672891
+223,"Arhin, Ebenezer  PaaKwesi",Engineering,EArhin@aga.gold,30036355,Condition Monitoring Supervisor, 
+224,"Arhin, Hilda",Shared Services,HArhin@aga.gold,30035796,Regional Manager – Performance & Reward,0552570459
+225,"Armah, Ken Ashie Ayitey",Processing,Ken.Armah@aga.gold,30042331,Plant Operations Superintendent,0593910266
+226,"Armar, Roland",Finance & Commercial,RArmah@aga.gold,30035615,Accounts Officer,0593804254
+227,"Arthur, Charity",Mining,ChArthur@aga.gold,30045007,Graduate Trainee,0543288525
+228,"Arthur, Christiana",Finance & Commercial,CArthur@aga.gold,30037375,Contracts Superintendent,0594061377
+229,"Arthur, David",Engineering,DArthur@aga.gold,30036356,CIC Superintendent - Process Plant,0559718736
+230,"Arthur, Ebenezer Reyes",Engineering,ERArthur@aga.gold,30043789,Electrical Technician,0242053245
+231,"Arthur, Maxwell",Engineering,MArthur2@aga.gold,30043989,Mechanical Technician, 
+232,"Arthur, Samuel Morkeh",Environment,SMArthur@aga.gold,30044445,Environmental Superintendent,0531033012
+233,"Asaana, Derrick",Engineering,DAsaana@aga.gold,30045778,Mechnanical Technician, 
+234,"Asamoah, Grace",Capital Project,gasamoah@aga.gold,30041520,Graduate Trainee,0241140385
+235,"Asante, Allen Asiedu",Project Services & BI,AAsante@aga.gold,30035744,Senior Project Contract Administrator,0552570756
+236,"Asante, Douglas",Mining,DAsante@aga.gold,30038400,Construction Miner, 
+237,"Asante, Emmanuel",Safety & Health,EAsante@aga.gold,30037532,Fire and Rescue Brigadesman, 
+238,"Asante, Mavis",Mining,MAsante@aga.gold,30037461,Explosive Supervisor, 
+239,"Asante, Nana Owusu",Engineering,NOAsante@aga.gold,30037800,Underground Dewatering Operator, 
+240,"Asante, Nixon Nathaniel",Shared Services,NAsante@aga.gold,30035795,Vice President - Environment,0552570462
+241,"Asante, Sylvester",Engineering,SAsante@aga.gold,30036811,NDT Technician, 
+242,"Asante-Amponsah, Isaac",Engineering,IAsante-Amponsah@aga.gold,30037531,Mechanical Supervisor - SMI,0245458130
+243,"Asare, Augustine",Processing,Augustine.Asare@aga.gold,30039214,Plant Shift Sectional Lead,0596995334
+244,"Asare, Daniel",Sustainability,DAsare@aga.gold,30036360,Community Infrastructure Superintendent,0552671980
+245,"Asare, Emmanuel",Engineering,EAsare@aga.gold,30043784,Electrical Technician,0244876924
+246,"Asare, Isaac",Mine Planning & Technical,IAsare@aga.gold,30047160,Graduate Trainee, 
+247,"Asare, Paul",Engineering,PAsare@aga.gold,30036970,Electrical Technician - STP/WTP/TSF, 
+248,"Asare, Prince Sarfo",Engineering,PSAsare@aga.gold,30037465,Mechanical Technician - SMI, 
+249,"Asare-Nyamekye, Albert",Processing,AAsare-Nyamekye@aga.gold,30042577,Plant Operator, 
+250,"Ashong, Wilfred Nii Kometey",Human Resources,WAshong@aga.gold,30036809,Training and Development Officer,0552671808
+251,"Asiamah, Samuel Kwame",Safety & Health,SKAsiamah@aga.gold,30042001,Superintendent - Health & Hygiene,0552559536
+252,"Asianoah, Abena Yeboah",Engineering,AYAsianoah@aga.gold,30045032,Graduate Trainee,0248432906
+253,"Asiedu, James Okyere",Engineering,JAsiedu@aga.gold,30034980,Winder Engine Driver,+233  206287592
+254,"Asiedu, Kate Menlah",Safety & Health,KMAsiedu@aga.gold,30045015,Graduate Trainee,0545909933
+255,"Asobara, Prosper Asewe",Engineering,PAsobara@aga.gold,30041665,Power Station Technician, 
+256,"Assan, Amos Kofi",Digital Technology,AKAssan@aga.gold,30044986,IT Infrastructure & Security Engineer, 
+257,"Assan, Basharat Sadick",Mine Planning & Technical,BAssan@aga.gold,30043213,Mine Planning Engineer, 
+258,"Asubonteng, Eric",Shared Services,EAsubonteng@aga.gold,30035037,SVP Africa Non-Operated Joint Venture,+233 50 1274388
+259,"asumah, alexander",Engineering,aasumah@aga.gold,30034867,Mechanical Engineer,0559863076
+260,"Atanga, Douglas",Mine Planning & Technical,DAtanga@aga.gold,30036341,Senior Manager - Mine Technical Services,0559715049
+261,"Atta-Badu, Hannah Sakyiwaa",Environment,HAtta-Badu@aga.gold,30044992,Graduate Trainee,0556444587
+262,"Attram, Andrew",Shared Services,AAttram@aga.gold,30035749,Ports Officer,+233 244655001
+263,"Atuahene, Gyimah",Geology,GAtuahene@aga.gold,30036215,Senior Geologist - Production, 
+264,"Awako, Frank",Engineering,FAwako@aga.gold,30036812,Machinist, 
+265,"Awariyah, Godwin",Engineering,GAwariyah@aga.gold,30037258,CIC Supervisor - UG,0531016222
+266,"awini, eric",Engineering,eawini@aga.gold,30034872,Superintendent-Light Vehicles & Services,0242001709
+267,"Awotwe, Joseph",Engineering,JAwotwe@aga.gold,30036613,Motor Rewinding Technician, 
+268,"awotwe, kofi",Shared Services,EAwotwe@aga.gold,30034801,PHU Superintendent,+233 244672214
+269,"Awotwe, Nana Adjoa Sipi",Shared Services,nasawotwe@aga.gold,30047252,National Service Person,+233 206652586
+270,"Awotwi, John B.",Digital Technology,jawotwi@aga.gold,30034868,IT Infrastructure & Project Specialist,0244344245
+271,"Awuah, Emmanuel Banahene",Engineering,EAwuah@aga.gold,30036608,Motor Rewinding Technician,+233  243142243
+272,"Awuah, Gabriel Baffour",Geology,GBAwuah@aga.gold,30044616,Mapping Geologist, 
+273,"Awuah, Isaac Barnie",Security,IBAwuah@aga.gold,30042750,Security Superintendent - Investigations,0257957777
+274,"Awuah, Moses",Engineering,Moses.Awuah@aga.gold,30044013,Mechanical Technician, 
+275,"Awuah, Ransford Baffour",Engineering,RAwuah@aga.gold,30037070,Operator, 
+276,"awuah, thomas amoako",Safety & Health,tawuah@aga.gold,30034816,Emergency Services Officer,+233  547438315
+277,"Awuku, Daniel Ohene",Finance & Commercial,DAwuku@aga.gold,30042330,Materials Planning Superintendent,0593910189
+278,"Ayaweni, Alexander",Engineering,AAyaweni@aga.gold,30037381,Electrical Technician - Underground,243273069
+279,"Ayaweni, Francis",Engineering,FAyaweni@aga.gold,30038495,Mechanical Technician-Material Handling, 
+280,"Ayeh, Kwasi Ofei",Processing,KAyeh@aga.gold,30039234,Plant Manager - Technical,0558519916
+281,"Ayensu, Richmond",Engineering,RAyensu@aga.gold,30043934,CIC Technician - Pastefill, 
+282,"Ayirebi, Gabriel Kwakye",Engineering,GKAyirebi@aga.gold,30046867,Condition Monitoring Technician,0530281610
+283,"azon, faustina",Engineering,fazon@aga.gold,30034822,Maintenance Administrator,0593804257
+284,"baah, meshack",Human Resources,meshack.baah@aga.gold,30035009,Senior Manager - Human Resources,0544322569
+285,"badu, stephen owusu",Mining,sobadu@aga.gold,30034884,Manager - Mining Projects,0501298472
+286,"Baffoe, Emmanuel",Engineering,Emmanuel.Baffoe@aga.gold,30039960,Mechanical Technician - HME, 
+287,"Baffoe, Eric",Safety & Health,EBaffoe@aga.gold,30037297,Fire and Rescue Brigadesman, 
+288,"Baffour, Dora Awuah",Mining,DBaffour@aga.gold,30040223,Skip Handler, 
+289,"Baffour, Kyei",Processing,KBaffour@aga.gold,30039072,Mechanical Technician-Process Plant, 
+290,"Baidoo, Alexander Kojo",Security,ABaidoo@aga.gold,30038740,Security Integrated Systems Officer,0556776880
+291,"Baidoo, Emmanuel",Sustainability,EBaidoo@aga.gold,30037135,Senior Manager: Community Relations - Africa,0277811134
+292,"Baidoo, Moses Yaw Panfo",Engineering,MBaidoo@aga.gold,30037534,CIC Technician - SMI, 
+293,"Baidoo, Nathaniel",Finance & Commercial,NBaidoo@aga.gold,30036076,Warehouse Officer, 
+294,"Baidoo, Percy",Human Resources,pbaidoo@aga.gold,30034837,Industrial Relations Officer,0559731673
+295,"Baidoo, Susana",Safety & Health,SuBaidoo@aga.gold,30047159,Graduate Trainee,0242959321
+296,"Baku, Benedict",Engineering,BBaku@aga.gold,30034928,Mechanical Technician - SMI,+233  244041033
+297,"Bandoh, Solomon",Engineering,SBandoh@aga.gold,30034903,Operator - Surface River Pumping,+233  246640065
+298,"Bassaw, Philip Aggisah",Engineering,PBassaw@aga.gold,30036394,CIC Supervisor - Process Plant,0596994478
+299,"Batso, Paul",Security,PBatso@aga.gold,30045645,Security Supervisor - Goldroom,0506488625
+300,"Bawa, Ishmael",Processing,IBawa@aga.gold,30037460,Plant Operator, 
+301,"Bema, Beatrice Akosua",Engineering,BBema@aga.gold,30036395,Maintenance Planner,0593972787
+302,"Bentum, Daniel Arthur",Sustainability,DBentum@aga.gold,30036397,Economic Development Superintendent,0552558384
+303,"beny smith, bernard",Human Resources,bsmith@aga.gold,30034839,HR Superintendent – Staffing and Line Support,0552727386
+304,"Bertmon, Anslinger Deladem",Engineering,ADBertmon@aga.gold,30042980,CIC Supervisor,0257995749
+305,"Beverla, Edward",Engineering,EBeverla@aga.gold,30042918,Winder Instrumentation Technician,542035171
+306,"Beverla, Felix So-Me",Engineering,FBeverla@aga.gold,30040790,Control Room Lead-SI & Electrical,0531033777
+307,"Beyuo, Prince Barnabas",Mine Planning & Technical,PBBeyuo@aga.gold,30046804,Survey Assistant,0242239544
+308,"Bimpong, Christian Afoakwah",Engineering,CBimpong@aga.gold,30039563,Shaft Maintenance Technician, 
+309,"Biney, Clifford Adu",Finance & Commercial,CBiney@aga.gold,30035617,Commercial Manager,0552569455
+310,"Biney, Kwame Sam",Digital Technology,KSBiney@aga.gold,30042115,Digital Technology Manager,0593856523
+311,"Biney, Linda",Human Resources,LBiney@aga.gold,30044688,Time and Attendance Officer,0542485861
+312,"Blankson, Richard Akomanin",Human Resources,RBlankson@aga.gold,30035848,Industrial Relations Superintendent,0552571193
+313,"Blay, Felix-Brutus",Engineering,FBlay@aga.gold,30036646,Electrical Technician - SMI (HV),246786491
+314,"boachie, augustine",Geology,aboachie@aga.gold,30035031,Chief Geologist - Core Management,0244322040
+315,"Boadi, Alfred",Engineering,ABoadi@aga.gold,30037862,Winder Engine Driver, 
+316,"Boahen, Ernest",Engineering,Ernest.Boahen@aga.gold,30038752,Mechanical Technician - Process Plant, 
+317,"Boahene, Akwasi",Security,ABoahene@aga.gold,30041878,Security Supervisor - Process Plant,0593847947
+318,"Boakese, Isaac Opoku",Geology,IBoakese@aga.gold,30037066,Material Dispatcher, 
+319,"Boakye Agyarko, Benjamin",Capital Project,BBAgyarko@aga.gold,30042430,Document Control Officer,0593941607
+320,"boakye agyei, paul",Finance & Commercial,pagyei@aga.gold,30034845,Compliance and Governance Superintendent,0559863061
+321,"Boakye, Augustine Appiah",Processing,AABoakye@aga.gold,30042399,Graduate Trainee, 
+322,"Boakye, Cristerry Obeng-Poku",Mining,Cristerry.Boakye@aga.gold,30040213,Skip Handler, 
+323,"Boakye, Isaac",Engineering,IBoakye@aga.gold,30034918,Mechanical Technician,0242737399
+324,"Boakye, Obiri-Agyei",Engineering,OABoakye@aga.gold,30041889,Engineering Manager - Technical,+233 59 3879687
+325,"Boakye, Sandra",Geology,Sandra.Boakye@aga.gold,30037431,Senior Geologist - Evaluation,  
+326,"Boamah, Dauda",Engineering,DBoamah@aga.gold,30039077,Mechanical Technician - Material Handling, 
+327,"Boamah, Gloria",Security,Gloria.Boamah@aga.gold,30043926,Administrative Clerk - Security,0531011977
+328,"Boart, Albert Beong",Capital Project,ABoart@aga.gold,30042225,Clerk of Works QAQC Electrical,0593880620
+329,"Boateng, Alfred",Engineering,ABoateng@aga.gold,30043872,Electrical Technician, 
+330,"Boateng, Bright Mensah",Engineering,BBoateng@aga.gold,30034972,Electrical Supervisor - Underground,0593804263
+331,"Boateng, Collins Ohemeng",Engineering,CBoateng@aga.gold,30036651,Electrical Technician - SMI (HV), 
+332,"Boateng, Edward Boakye",Human Resources,EBBoateng@aga.gold,30036354,HRIS Officer,0593972772
+333,"Boateng, Frederick Osei",Processing,foboateng@aga.gold,N/A,Metallurgical Training Specialist,0559108363
+334,"Boateng, George",Engineering,George.Boateng@aga.gold,30043491,Electrical Technician - Process Plant, 
+335,"Boateng, Justice",Processing,JBoateng@aga.gold,30037448,Paste Plant Shift Supervisor,0257997348
+336,"Boateng, Kofi Agyeman",Capital Project,KABoateng@aga.gold,30042555,Projects Services Manager,0593919385
+337,"boateng, ohemeng",Engineering,oboateng@aga.gold,30034981,Electrical Supervisor - Winders,0257997303
+338,"Boateng, Peggy",Project Services & BI,PBoateng@aga.gold,30035781,Project Contract Administrator,0245956517
+339,"Boateng, Vincent",Security,VKBoateng@aga.gold,30044807,Security Supervisor - Investigations,233  209353555
+340,"Boessi-Calmwill Andy, Emmanuel",Processing,EBossie-Calmwill@aga.gold,30037396,Plant Operator, 
+341,"bonna, eugene",Finance & Commercial,ebonna@aga.gold,30035014,Supply Chain Specialist,0501298475
+342,"Bonnah, Dennis",Engineering,DBonnah@aga.gold,30040738,Winder Engine Driver Trainee, 
+343,"Bonsu, Isaac",Engineering,Isaac.Bonsu@aga.gold,30038389,Electrical Technician - Process Plant, 
+344,"Bonsu, Ishmael",Engineering,IBonsu@aga.gold,30038340,CIC Technician - UG,  
+345,"Bonsu, Josephine Osei",Sustainability,Josephine.Bonsu@aga.gold,30037471,Community Engagement Officer,0594023480
+346,"Bonya, Albert Madio",Engineering,ABonya@aga.gold,30038505,Underground Dewatering Operator, 
+347,"Bonzo, Abraham",Safety & Health,ABonzo@aga.gold,30034957,Fire and Rescue Brigadesman, 
+348,"Bortey, Albert Nii",Engineering,ABortey@aga.gold,30038491,CIC Technician, 
+349,"Brako, Bernard",Geology,BBrako@aga.gold,30036713,Material Dispatcher,0552685339
+350,"Brakye, Bernard Fosu Yaw",Environment,BBrakye@aga.gold,30039820,Environmental Monitoring Technician, 
+351,"Brentuo, Issah",Engineering,IBrentuo@aga.gold,30038749,Fabricator - Process Plant, 
+352,"Brew-Sam, Gilbert",Engineering,GBrew-Sam@aga.gold,30034962,Engineering Supervisor - Dewatering,0257997263
+353,Bright Agyei Nyantakyi,Shared Services,BANyantakyi@aga.gold,30037205,Ports Officer,+233 249421320
+354,"Britwum, Yaw Opoku",Sustainability,YOBritwum@aga.gold,30043830,Monitoring and Evaluation Specialist,0531008232
+355,"Brobbey, Isaac Opoku",Safety & Health,IBrobbey@aga.gold,30037300,Fire and Rescue Officer,  
+356,"Brobbey, Michael",Safety & Health,MBrobbey@aga.gold,30045344,Safety Officer - Surface,0209242353
+357,"broni, eric",Engineering,ebroni@aga.gold,30034880,Senior Manager – Engineering,0501412824
+358,"Bruce, Isaac Osew",Engineering,IOBruce@aga.gold,30043707,Electrical & Instrumentation Supervisor,0593900093
+359,"bruce, theophilus nicholas",Environment,theophilus.bruce@aga.gold,30034881,Environmental Officer,0501323251
+360,"Buadu, Emmanuel Kofi",Engineering,EKBuadu@aga.gold,30037808,Underground Dewatering Operator, 
+361,"Buahin, Kwaku Ampomah",Processing,KABuahin@aga.gold,30037364,Senior Manager - Processing,0552679309
+362,"Buamah, Wisdom",Mine Planning & Technical,WBuamah@aga.gold,30047368,Ventilation Superintendent, 
+363,Carl Aruna Nelson,Shared Services,Canelson@aga.gold,30043193,Audit Manager,+233 594046720
+364,"Chibah, Kafui",Geology,KChibah@aga.gold,30043230,Geologist - Drilling and Mapping,0240615498
+365,"Cobbiah, Emmanuel",Engineering,ECobbiah@aga.gold,30037548,Boiler Maker, 
+366,"Cobbinah, Benedict",Engineering,BCobbinah@aga.gold,30039833,Winder Engine Driver, 
+367,"Coffie, Joseph",Engineering,JKCoffie@aga.gold,30045345,Mechanical Technician - Material Handling,0245878655
+368,"Commodore, Julius",Engineering,JCommodore@aga.gold,30036350,Maintenance Planner - Process Plant, 
+369,"Commodore, Ralph",Engineering,RCommodore@aga.gold,30037760,Underground Dewatering Operator, 
+370,"Crankson, Charles",Engineering,CCrankson@aga.gold,30042576,Mechanical Technician - Process Plant, 
+371,"Cromwell, John Macdonald",Geology,JCromwell@aga.gold,30036213,Senior Geologist - Production, 
+372,"Cudjoe, Joshua",Engineering,Joshua.Cudjoe@aga.gold,30037827,Mechanical Technician, 
+373,"Daanaah, Rougy Yeng-Baare",Safety & Health,RDaanaah@aga.gold,30042573,Safety Officer - Underground, 
+374,"dadson, emmanuel",Finance & Commercial,edadson@aga.gold,30035013,Finance Superintendent - Receivables/Pay,0244336261
+375,"Dadzie, Bismark",Engineering,BDadzie@aga.gold,30044998,Graduate Trainee,0554078457
+376,"Dakura, Roger",Engineering,Roger.Dakura@aga.gold,30037761,Underground Dewatering Operator, 
+377,"Dakura, Romanus",Finance & Commercial,RDakura@aga.gold,30036625,Warehouse Officer, 
+378,Danielle Harmony Asamoah,Shared Services,DHAsamoah@aga.gold,30045046,Graduate Trainee, 
+379,"Danquah, Gloria Darko",Processing,GDanquah@aga.gold,30036258,Administrative Officer - Process Plant,0559723386
+380,"danquah, lovick",Engineering,ldanquah@aga.gold,30034986,E&I Superintendent - Winders & Shafts,0593801471
+381,"Danso, George",Geology,GDanso@aga.gold,30044974,Graduate Trainee,2.33553E+11
+382,"Danso, Kenneth",Engineering,KDanso@aga.gold,30036627,Electrical Supervisor - Winder,0257997297
+383,"dapaah, eugene",Mine Planning & Technical,edappah@aga.gold,30034848,Chief Surveyor,0559670063
+384,"Darko, Esther Oforiwaa",Safety & Health,EODarko@aga.gold,30037105,Safety Officer - Systems,  
+385,"darko, james",Mining,jdarko@aga.gold,30035019,Mine Captain-Construction & Shaft Maint,0501323250
+386,"Darkwah, Gertrude",Human Resources,GQuaicoe@aga.gold,30035049,Human Resources Officer,0552727381
+387,"Debrah, Eric Kwame",Engineering,EKDebrah@aga.gold,30041501,Mechanical Supervisor - Pastefill and Material Handling,0257997338
+388,"Dedume, Edwin",Digital Technology,EDedume@aga.gold,30047254,National Service Person,0547831651
+389,"Dehar, Richardson Elikplim",Engineering,REDehar@aga.gold,30045030,Graduate Trainee,0249343895
+390,"Dembovsky, Charles",Capital Project,CDembovsky@aga.gold,30043769,Mechanical Engineer - Surface,0257996106
+391,"Dennis, Soenaa",Engineering,SDennis@aga.gold,30043786,Electrical Technician,0240117619
+392,"Denyo, Prince Kwaku",Processing,PKDenyo@anglogoldashanti.com,30043638,Tailings Manager,0593974142
+393,Desmond Awatey Banahene,Security,DABanahene@aga.gold,30042441,Senior Manager - Security,+233 501327374
+394,Dilys Ewuraesi Mbiah,Shared Services,DEMbiah@anglogoldashanti.com,N/A,Legal Officer,+233 205967254
+395,"Dittoh, Elijah Gbong",Capital Project,EDittoh@aga.gold,30042126,Electrical & Instrumentations Draghtsman,0593987714
+396,"Dogbatsey, Enoch",Engineering,EDogbatsey@aga.gold,30037866,Winder Engine Driver, 
+397,"Donkoh, Ebenezer",Safety & Health,EDonkoh@aga.gold,30037926,Safety Officer - Surface, 
+398,"Donkoh, Emmanuel",Engineering,emmanuel.donkoh@aga.gold,30045447,Winder Instrumentation Technician, 
+399,"Donkor, Benedict",Engineering,Benedict.Donkor@aga.gold,30041112,Electrical Technician - Winders, 
+400,"Donkor, Bismark",Mine Planning & Technical,Bismark.Donkor@aga.gold,30039437,Drill and Blast Engineer, 
+401,"Donkor, Charles",Processing,Charles.Donkor@aga.gold,30037456,Laboratory Technical Assistant, 
+402,"Donkor, Christopher",Engineering,CDonkor@aga.gold,30037207,Electrical Technician - Process Plant, 
+403,"Donkor, Emmanuella",Geology,Emmanuella.Donkor@aga.gold,30041684,Logging Geologist, 
+404,"Donkor, Eric",Engineering,EDonkor@aga.gold,30037204,Electrical Technician - Process Plant,0257996581
+405,"Donkor, Kwartemaah Salomey",Geology,KSDonkor@anglogoldashanti.com,30042223,Exploration Geological Technician, 
+406,"Dorh, Samuel Adjartey Kono",Engineering,Samuel.Dorh@aga.gold,30041886,Electrical Technician - SMI, 
+407,"dorh, solomon",Mining,sdorh@aga.gold,30035011,Superintendent - Surface Works,0244334359
+408,"Duah, Akwasi",Processing,ADuah@aga.gold,30037398,Plant Operator, 
+409,"Duah, Kwaku Junior",Geology,KJDuah@aga.gold,30044609,Mapping Geologist, 
+410,"Duah, Marian",Sustainability,MDuah@aga.gold,30041236,Community Relations Officer- Systems and Support,0559731674
+411,"Dughan, Emery",Capital Project,EDughan@aga.gold,30042629,Resource Planner,0594017684
+412,"Duku, Kofi Ahenkorah",Security,KDuku@aga.gold,30041876,Security Superintendent - Process Plant,0596913979
+413,"Duncan, Nathaniel Yoofi",Engineering,NDuncan@aga.gold,30037255,Mechanical Technician - SMI, 
+414,"Dwaah, Caleb",Sustainability,CDwaah@aga.gold,30042124,Civil Engineer,0594036746
+415,"Dwumah, Bismark",Mining,BDwumah@aga.gold,30040216,Skip Handler, 
+416,"Dzakah, Kwaku Senyo",Mine Planning & Technical,KSDzakah@aga.gold,30045005,Graduate Trainee,0540706917
+417,Ebenezer Ebo Enyan,Shared Services,Eeenyan@aga.gold,30035623,Ports Officer,2.33555E+11
+418,eddie aggrey-fynn,Shared Services,eaggrey-fynn@aga.gold,30034813,Payroll Superintendent,+233 244 324530
+419,"Edmund-Acquah, Jacob",Project Services & BI,jedmund@aga.gold,30035017,Snr Manager - Project Services & BI,0544341917
+420,"Edmundson, Priscilla",Engineering,PEdmundson@aga.gold,30041001,Winder Engine Driver, 
+421,"Edusei, Daniel",Engineering,DEdusei@aga.gold,30037545,Lamp Room Attendant, 
+422,"Edzii Davidson, Abigail",Engineering,AEDavidson@aga.gold,30040741,Winder Engine Driver Trainee, 
+423,"eghan, kisman",Shared Services,keghan@aga.gold,30034811,Electrical Engineering Specialist,0501324742
+424,"Egyir, Curtis Richard",Finance & Commercial,CEgyir@aga.gold,30044031,Warehouse Officer, 
+425,Ekua Katsina Newman,Shared Services,Eknewman@aga.gold,30043194,Legal Manager,+233 551713922
+426,"Eliason, Anthony Papa Elia",Engineering,APEEliason@aga.gold,30044990,Graduate Trainee,0554617403
+427,"Ellimah, Joseph",Engineering,JEllimah@aga.gold,30037294,Winder Engine Driver, 
+428,"Endeh, Christopher",Processing,CEndeh@aga.gold,30043431,Electrical Technician, 
+429,"Engmann, Christian T.",Security,CTEngmann@aga.gold,30034924,Security Guard - JAMOT,0556776879
+430,"Ennin, Ellen",Geology,EEnnin@aga.gold,30044036,Underground Geology Technician,0248744494
+431,"Ennin, Elvis",Engineering,Elvis.Ennin@aga.gold,30037079,Electrical Technician - Process Plant, 
+432,"Ennin, Samuel",Sustainability,SEnnin@AngloGoldAshanti.com,30035986,Land Access and Compensation Officer,0559862813
+433,"Entsie, Richard",Engineering,REntsie@aga.gold,30042662,Engineering Manager - Fleet,0594003133
+434,Eric O. Acheampong,Geology,EOAcheampong@aga.gold,30042230,Senior Manager - Geology,0593885269
+435,Ernest AgbenyoHaggis,Shared Services,Eahaggis@aga.gold,30037161,Ports Officer,+233 552696394
+436,"Erzuah, Godfred",Engineering,GErzuah@aga.gold,30039316,Engineering Supervisor - LME,0593797497
+437,"Eshun, Alfred",Security,AEshun@aga.gold,30037932,Security Guard, 
+438,"Eshun, Faustina",Environment,FEshun@aga.gold,30039817,Environmental Monitoring Technician, 
+439,"Eshun, Papa Kojo Atta Kakra",Processing,PKEshun@aga.gold,30047161,Graduate Trainee, 
+440,"Eshun, Samuel Nana",Mine Planning & Technical,SNEshun@anglogoldashanti.com,30038757,Senior Backfill Engineer,0596913686
+441,"Essandoh, Kobina Abekah",Processing,KEssandoh@aga.gold,30041021,Control Room Lead,0257957537
+442,"Essel, Isaac",Engineering,IEssel@aga.gold,30043790,Electrical Technician,0242679582
+443,"Essel, Joseph Alex",Engineering,JEssel@aga.gold,30037260,Mechanical Supervisor - SMI,0593927309
+444,"Esson, Benjamin Jr",Engineering,BEsson@aga.gold,30043939,Engineering Manager - KMS,0531012785
+445,Esther Afriyie,Shared Services,EAfriyie@aga.gold,30035565,Accounts Officer,+233 501207204
+446,"Etuah, Portia Nana Nyama",Human Resources,PEtuah@aga.gold,30038328,Housing Clerk,0559862948
+447,Evans Thompson,Shared Services,ethompson@aga.gold,30034804,Ports Officer,+233 266071897
+448,"Faisal, Mohammed",Engineering,MFaisal@aga.gold,30037547,Boiler Maker - LV&UG Trackless Equipment, 
+449,"Faisal, Rufkatu",Mine Planning & Technical,RFaisal@aga.gold,30045010,Graduate Trainee,0547277355
+450,"Fatao, Issifu",Engineering,IFatao@aga.gold,30038386,CIC Technician - Process Plant, 
+451,"Felli, Oswald",Sustainability,OFelli@aga.gold,30043639,Communications Superintendent,0593972217
+452,"Fena, Nicholas",Engineering,NFena@aga.gold,30041119,Electrical Technician - Winders,+233  249343646
+453,"Fening, Eugene Kwaku",Finance & Commercial,EFening@aga.gold,30036571,Buyer,0257997376
+454,"Fenyi, Bernardo Kojo",Finance & Commercial,BFenyi@aga.gold,30036681,Buyer,0257997381
+455,"Fianko, Samuel",Geology,SFianko@aga.gold,30042431,Senior Geologist - Evaluation, 
+456,"fokuoh, benjamin",Finance & Commercial,bfokuoh@aga.gold,30034815,Commodity Lead – Engineering & Capital Equipment,0594061532
+457,"Fordjour, Dominic O.",Mine Planning & Technical,DFordjour@AngloGoldAshanti.com,30043795,Geotechnical Data Superintendent,0531006964
+458,"Forkuoh, Afia Dufie Kwarteng",Mine Planning & Technical,AForkuoh@aga.gold,30043222,Ventilation Engineer,0247876117
+459,"Fosu, Emmanuel",Finance & Commercial,Emmanuel.Fosu@aga.gold,30044040,Warehouse Officer, 
+460,"Fosu, Micheal",Engineering,Micheal.Fosu@aga.gold,30037707,Mechanical Technician,0246641622
+461,"Fosu-Opoku, Michael",Mining,MFosu-Opoku@aga.gold,30045013,Graduate Trainee,0245800247
+462,"Frempong, Emmanuel Ntim",Processing,ENFrempong@aga.gold,30042332,Plant Operations Superintendent,0593910252
+463,"Frimpong , Phinehas",Processing,PKFrimpong@aga.gold,30044436,Plant Operator, 
+464,"Frimpong, Clement",Engineering,CFrimpong@aga.gold,30037264,CIC Technician - Process Plant, 
+465,"Frimpong, Derrick",Engineering,Derrick.Frimpong@aga.gold,30040214,Skip Handler, 
+466,"Frimpong, Edwish",Processing,edfrimpong@aga.gold,30045037,Graduate Trainee,0540787414
+467,"Frimpong, Emmanuel Manso",Engineering,EFrimpong@aga.gold,30036253,Electrical Technician - SMI (LV), 
+468,"Frimpong, Emmanuel Nuamah",Engineering,Emmanuel.Frimpong@aga.gold,30039562,Shaft Maintenance Technician, 
+469,"Frimpong, George",Mining,GeFrimpong@aga.gold,30045444,Mine Captain - Development,0244835299
+470,"Frimpong, Isaac Kwasi",Processing,IFrimpong@aga.gold,30039501,Plant Shift Sectional Lead,0593811963
+471,"frimpong, Kofi agyen",Engineering,KAgyen-Frimpong@aga.gold,30034944,Supervisor - TSF/WTP,0596994476
+472,"Frimpong, Mavis",Geology,Mavis.Frimpong@aga.gold,30037067,Mapping Geologist, 
+473,"Frimpong, Michael Appiah",Engineering,MFrimpong@aga.gold,30036895,CIC Technician-TSF/WTP, 
+474,"Fynn, Edward Jonah",Finance & Commercial,EFynn@aga.gold,30037164,Materials Planner,+233 275247905
+475,"Gabienoo, Alexander Kofi",Engineering,AGabienoo@aga.gold,30036255,Electrical Technician - SMI (LV), 
+476,"Gbande, David",Finance & Commercial,DGbande@aga.gold,30044483,Senior Forensics Auditor, 
+477,George Bush,Shared Services,Gbush@aga.gold,30037111,Ports Officer,+233 552696414
+478,Getrude Eva Mends,Shared Services,GEmends@aga.gold,30036566,Travel Assistant,+233 559734663
+479,"Ghansah, Lawrence",Engineering,LGhansah@aga.gold,30036643,Electrical Technician - SMI (HV), 
+480,"Gibrine, Abubakar",Mining,AGibrine@aga.gold,30038397,Construction Miner, 
+481,"Gliku, Gifty",Engineering,GGliku@aga.gold,30040732,Winder Engine Driver Trainee, 
+482,"Goumou, Jacqueline",Finance & Commercial,JGoumou@aga.gold,30036348,Buyer,0257997386
+483,"Gour, Frank Kwame",Geology,FGour@anglogoldashanti.com,30037516,Senior Geologist - Exploration,0531033783
+484,"Graham, Felix",Engineering,FGraham@aga.gold,30036893,Electrical Technician - Process Plant,246003588
+485,"Gyabeah, Alex",Processing,AGyabeah@aga.gold,30037397,Plant Operator, 
+486,"Gyambrah, Esther Ohemaa Benewaa",Safety & Health,EGyambrah@aga.gold,30046696,Fire and Rescue Brigades Person,0241612407
+487,"Gyamfi, Ebenezer",Geology,Ebenezer.Gyamfi@aga.gold,30035072,Senior Geologist - Evaluation,0257957771
+488,"Gyamfi, Seth",Engineering,SGyamfi@aga.gold,30043788,Electrical Technician,0249335168
+489,"Gyamfi-Asante, Kevin",Geology,KGyamfi-Asante@aga.gold,30035066,Senior Geologist - Core Management,+233  243663400
+490,"Gyan, Frank",Engineering,FGyan@aga.gold,30037673,Material Handling Supervisor,0257997333
+491,"Gyasi, Staffi Benewaa",Capital Project,SBGyasi@aga.gold,30044510,Graduate Mining Engineer, 
+492,"Gyau, Lawrencia",Digital Technology,LGyau@aga.gold,30035984,IT Field Support Engineer,0593872464
+493,"Gyedu, Kenneth",Engineering,KGyedu@aga.gold,30037463,Mechanical Technician - STP/WTP/TSF, 
+494,"Gyekye, Martin Ohemeng",Processing,MOGyekye@aga.gold,30045026,Graduate Trainee, 
+495,"Gyimah, Benard",Mine Planning & Technical,BGyimah@aga.gold,30035074,Geotechnical Engineer,+233  247585418
+496,"Haick, Anthony Charles A.",Processing,Ahaick@aga.gold,30038713,Paste Plant Control Room Supervisor,+233 233 241655084
+497,"haizel, benjamin",Engineering,bhaizel@aga.gold,30034858,Mechanical Supervisor - Surface,+233  243666388
+498,"Hamidu, Hajia Hasimawu",Mine Planning & Technical,Hajia.Hamidu@aga.gold,30041675,Surveyor, 
+499,"Hayford, George Esua",Engineering,GHayford@aga.gold,30036574,Tyre Technician, 
+500,"Hayford, Kofi Gyasi",Finance & Commercial,SHayford@aga.gold,30036148,Accounts Officer,0593812011
+501,"hockman, prince john",Engineering,jhockman@aga.gold,30034989,Electrical Supervisor - Winders,0593801472
+502,"Hope, Eva Frema",Environment,EHope@aga.gold,30037404,Closure Superintendent, 
+503,"Husein-Talatu, Nadia Baaji",Engineering,nhusein-talatu@aga.gold,30045550,Engineering Planner - KMS,0548144820
+504,"Hyiaman, Michael Osei",Human Resources,MHyiaman@aga.gold,30035357,HRIS Superintendent,0531016229
+505,"Ibrahim, Abdul Hamid",Mining,AHIbrahim@aga.gold,30045004,Graduate Trainee,0240658686
+506,"Iddris, Abdul Rahaman",Engineering,AIddris@aga.gold,30038343,CIC Technician - UG,  
+507,"Iddrisu, Moro",Geology,MIddrisu@aga.gold,30044030,Underground Geology Technician,0243821002
+508,Ingrid Yeboah,Shared Services,IYeboah@aga.gold,30034800,Compliance Officer: Ghana,+233 244 885134
+509,"inkoom, ofori",Engineering,oinkoom@aga.gold,30034832,Senior Planner - Underground,0552711814
+510,"Ira, Joseph Naanawala",Security,JIra@aga.gold,30041879,Security Supervisor - UG,0596994477
+511,Ishmael Koney,Shared Services,iskoney@aga.gold,30034806,IT Officer - Shared Services,+233 544 311551
+512,"Issah, Iddrisu",Engineering,IIssah@aga.gold,30037706,Mechanical Technician - HME, 
+513,"Jawula, Nuhu Salami",Engineering,NJawula@aga.gold,30038098,Mechanical Technician-HME, 
+514,"Jehu-Appiah, Agnes",Engineering,AJehu-Appiah@aga.gold,30045279,Electrical Technician, 
+515,"Joachim, Firibu Mumuni",Safety & Health,FJoachim@aga.gold,30037299,Fire and Rescue Officer,+233 249659513
+516,"Johnson, Jacqueline Ansah",Mining,Jacqueline.Johnson@aga.gold,30039455,Control Room Engineer, 
+517,Joseph Baidoo,Engineering,JBaidoo@aga.gold,30034936,Mechanical Technician - Pump Rebuild,+233  243113378
+518,Joseph Manu,Engineering,Joseph.Manu@aga.gold,30036564,Maintenance Planner, 
+519,Joy Dzidzor Asamoah,Shared Services,JDAsamoah@aga.gold,30045050,Pupil, 
+520,"Kakah, Dennis",Engineering,DKakah@aga.gold,30041400,Electrical Technician - SMI,+233  555630606
+521,"Karikari, Gabriel",Processing,GKarikari@aga.gold,30045555,TSF Project Manager,+233  551251888
+522,"Karikari, Kwabena Kwakye",Engineering,KKarikari@aga.gold,30044434,Laboratory Technologist, 
+523,kate crentsil,Shared Services,kcrentsil@aga.gold,30034797,Travel Administrator,+233 244 342772
+524,"Keketsor, Samuel",Engineering,SKeketsor@aga.gold,30041111,CIC Supervisor - Process Plant,0593862959
+525,"Kessey Boateng, Victor",Engineering,VBoateng@aga.gold,30036576,Condition Monitoring Supervisor,0594044220
+526,"Kessey-Boateng, Charles",Processing,CKessey-Boateng@aga.gold,30037697,Plant Shift Sectional Lead, 
+527,"Kesse-Yeboah, Samuel",Engineering,SKesse-Yeboah@aga.gold,30036260,CIC Supervisor - Underground,0593804268
+528,Keziah Enyan,Shared Services,Keziah.Enyan@aga.gold,30038068,Communication Specialist,+233 552834838
+529,"Kinful, Eric",Engineering,EKinful@aga.gold,30041373,Mechanical Supervisor - Pastefill and Material Handling,0257997326
+530,"King-Gambrah, Kwame",Processing,KKing-Gambrah@aga.gold,30039323,Plant Operator, 
+531,"Kodam, abdulai",Finance & Commercial,akodam@aga.gold,30035038,Financial Accountant - GL Reporting,0501568199
+532,"Koduah, Eric",Geology,EKoduah@aga.gold,30038017,Underground Technician, 
+533,"Konadu, Dawuda",Mine Planning & Technical,DKonadu@anglogoldashanti.com,30036892,Chief Geotechnical Engineer,0552651811
+534,"Koomson, Emmanuella Eyram",Mine Planning & Technical,EEKoomson@aga.gold,30045012,Graduate Trainee,0243796382
+535,"Koomson, Isaac",Engineering,IKoomson@aga.gold,30037830,Fabricator - Process Plant, 
+536,"Koomson, Samuel",Engineering,SKoomson@aga.gold,30038543,Electrical Supervisor-Electrical & Energ, 
+537,"Koramoah, Alexander",Environment,AKoramoah@aga.gold,30037621,Environmental Officer-Waste & Chem Mgt, 
+538,"Koranteng, Sebastian",Engineering,Sebastian.Koranteng@aga.gold,30042516,NDT Technician, 
+539,"Korkor, Alberta",Processing,AKorkor@aga.gold,30037441,Laboratory Technical Assistant, 
+540,"Korkor, Shardey Joycelyn",Finance & Commercial,SJKorkor@aga.gold,30045339,Buyer,0543104162
+541,"Kpem, Michael Maazo",Engineering,MKpem@aga.gold,30037184,Mechanical Supervisor-Winders,0257997270
+542,"kpogli, salomey",Engineering,skpogli@aga.gold,30034889,Tribologist & Oil Lab Chemist,0559681624
+543,"Kponyo, Peter Prince",Environment,PKponyo@aga.gold,30037390,Environmental Officer - Monitoring, 
+544,"Kruger, Leon",Capital Project,Lkruger@aga.gold,30044654,Senior Manager - U/G Infrastructure,+233  531033007
+545,"Kumah, Theophilus",Mining,Theophilus.Kumah@aga.gold,30043706,Mine Captain - Operations,0593948293
+546,"Kumi, Francis",Processing,FKumi@aga.gold,30038772,Metallurgist,0531018310
+547,"Kusi, Ishmael",Finance & Commercial,IKusi@aga.gold,30036145,Financial  Controller,0559694476
+548,"Kusi, Regina",Engineering,Regina.Kusi@aga.gold,30044529,Maintenance Planner - Process Plant,0593962003
+549,"Kutin, Isaac Amoako",Geology,IKutin@aga.gold,30034956,Core Yard Technician, 
+550,"Kuttin, George Charles",Engineering,GKuttin@aga.gold,30034964,Mechanical Supervisor - Winders,0257997280
+551,"Kwaateng, Kingsley",Engineering,KKwaateng@aga.gold,30034943,Mechanical Supervisor - Processing Plant,0596994475
+552,"Kwakye, Nicholas Ofori",Processing,NKwakye@aga.gold,30037974,Plant Operator, 
+553,"Kwankye, Louisa Owusu",Engineering,LKwankye@aga.gold,30039482,Lamp Room Attendant, 
+554,"Kwapong, Ofeibea",Engineering,OKwapong@aga.gold,30036000,Document Control Officer,0593972776
+555,"kwapong, regina",Engineering,rkwapong@aga.gold,30034830,Reliability Engineer,0559744727
+556,"Kwarteng, Kenneth",Engineering,KKwarteng@aga.gold,30036628,Electrical Technician - SMI (HV), 
+557,"Kwegyir, Prince Kwame",Engineering,PKwegyir@aga.gold,30038547,CIC Technician - SMI, 
+558,"Kwesi, Pascal",Geology,PKwesi@anglogoldashanti.com,30042152,Mapping Geologist,+233  507283553
+559,"Kwofie, Sampson",Engineering,Sampson.Kwofie@aga.gold,30045346,Mechanical Technician,
+560,"Kwofie, Samuel",Processing,SKwofie@aga.gold,30039322,Plant Operator, 
+561,"Kyei, Emmanuel Kwabena",Mining,EKyei@aga.gold,30034987,Mine Captain - Operations,  0247955489
+562,"Kyei, Foster Karikari",Engineering,FKyei@aga.gold,30035207,Driver, 
+563,"Kyei, Kwadwo Asare",Capital Project,KAKyei@aga.gold,30042661,Manager: Supply Chain - Projects,0594027115
+564,"kyei, mavis nana yaa",Sustainability,mkyei@aga.gold,30034824,Superintendent – Social Develop. & Gender,0556778184
+565,"Kyekyeku, Kwame Okodie",Engineering,KKyekyeku@aga.gold,30037933,Electrical Technician - Underground, 
+566,"Kyem-Bonah, Philip",Engineering,PKyem-Bonah@aga.gold,30037835,Mechanical Supervisor - Processing Plant,0593804264
+567,"Kyeremanteng, Jonas",Engineering,JKyeremanteng@aga.gold,30037759,Underground Dewatering Operator, 
+568,"Kyeremateng, Eric",Engineering,EKyeremateng@aga.gold,30039627,Mechanical Technician - Process Plant, 
+569,"Kyeremeh, Linda Asantewaa",Mining,LKyeremeh@aga.gold,30037825,Weighbridge Attendant, 
+570,"Larbi, Clement Agyei",Processing,CLarbi@aga.gold,30041750,Paste Plant Laboratory Technician / Sampler,+233 024 3128476
+571,"Lartey, Kwabena Abedi",Mine Planning & Technical,KALartey@aga.gold,30040678,Senior Drill and Blast Engineer,0257997419
+572,"Lartey, Samuel Boateng",Engineering,SLartey@aga.gold,30038755,Mechanical Technician - Process Plant, 
+573,"Lukeman, Stephen",Engineering,SLukeman@aga.gold,30034970,Operator,+233  242228299
+574,"Lumor, Emelda Esinam",Management,ELumor@aga.gold,30037671,Personal Assistant,0593811962
+575,"madah, charlotte",Management,cmadah@aga.gold,30034856,Personal Assistant,0501324744
+576,"Malayi, Michael Mboana",Mining,MMalayi@aga.gold,30043672,Shiftboss,0593998980
+577,Mamadou Alpha Balde,Capital Project,malpha.balde@aga.gold,30043390,"Instrumentation, Automation & Controls Engineer",0593997133
+578,"manchey, robert",Engineering,rmanchey@aga.gold,30034863,Mechanical Superintendent - SMI,0559863078
+579,"Manteaw, Emmanuel Dartey",Engineering,EManteaw@aga.gold,30038329,Power Systems Engineer,0245786931/0209610391
+580,"Manu, Augustine",Finance & Commercial,amanu@aga.gold,30035921,Management Accountant,0552571766
+581,"Manu, Christopher Yaw",Engineering,CManu@aga.gold,30037088,Winder Engine Driver, 
+582,"Manu, Edward",Engineering,Edward.Manu@aga.gold,30039565,Shaft Maintenance Technician, 
+583,mary adu azu,Shared Services,mary.adu-azu@aga.gold,30034805,Ports Officer,+233 244109030
+584,"Massey, Emmanuel  Kofi",Sustainability,EMassey@aga.gold,30034826,Superintendent - Stakeholder & Land Access Management,0556783454
+585,"Mba, John",Mining,JMba@aga.gold,30035905,Weighbridge Attendant,243779242
+586,"Mbena, Edmund Sankuri",Engineering,EMbena@aga.gold,30039033,Mechanical Technician - Winders, 
+587,"mensah bonsu, rosina",Human Resources,rmensahbonsu@aga.gold,30034835,Housing Officer,0559730849
+588,"Mensah, Abraham Afedzi",Mine Planning & Technical,AAMensah@aga.gold,30044015,Short Term Planning Superintendent,0531012792
+589,"Mensah, Alert",Shared Services,amensah@aga.gold,30047198,National Service Person,+233 209698007
+590,"Mensah, Barbara Korkoi Mawuena",Capital Project,BKMensah@aga.gold,30042429,Contractor Administrator,0593941579
+591,"Mensah, Bernice Opuni",Capital Project,Bernice.Mensah@aga.gold,30036655,Expeditor,0559705764
+592,"Mensah, Cidel Naa Oye",Shared Services,cnomensah@aga.gold,30043834,Graduate Trainee,+233 55375 2956
+593,"Mensah, Frank Kofi",Processing,FKMensah@aga.gold,30042128,Metallurgist,0257997359
+594,"Mensah, Frank Xavier",Finance & Commercial,FXMensah@aga.gold,30035742,Accounts Officer,0593812001
+595,"Mensah, George Obeng",Engineering,GMensah@aga.gold,30037388,Electrical Supervisor - UG,0531016248
+596,"Mensah, Isaac Ofori",Security,IOMensah@aga.gold,30041877,Security Supervisor - Process Plant,0593847967
+597,"Mensah, Isaac Peprah",Engineering,IMensah@aga.gold,30036249,Shaft Maintenance Supervisor,0257997308
+598,"Mensah, John Abeku",Geology,JAMensah@aga.gold,30036357,Senior Geologist - Production,0559705726
+599,"Mensah, Martin",Security,MMensah@aga.gold,30044689,"Security Guard, JAMOT",
+600,"Mensah, Nicholas Osei",Security,NMensah@aga.gold,30035003,Security Guard,0593841830
+601,"Mensah, Obed",Processing,Obed.Mensah@aga.gold,30042683,"Goldroom, Gravity, Plant Services", 
+602,"Mensah, Philip Owusu",Processing,POMensah@aga.gold,30046868,"Plant Day Supervisor - Goldroom, Gravity, Plant Services", 
+603,"Mensah, Romiyonic Charles",Capital Project,RCMensah@aga.gold,30042428,Mine Captain - Projects,0257964877
+604,"Mensah, Samuel (Geology)",Geology,Sam.Mensah@aga.gold,30038023,Underground Technician, 
+605,"Mensah-Brobbey, Bernard",Capital Project,BMensah-Brobbey@aga.gold,30035782,Cost Controller,0552570463
+606,"Mettle, Daniel",Engineering,DMettle@aga.gold,30041254,Operator - Vent Fans and Fridge Plant, 
+607,Michael Deku,Shared Services,MDeku@aga.gold,30034799,Accounts Officer - Shared Services,+233 249444071
+608,"Mmollah, Alphonse",Mine Planning & Technical,ammollah@anglogoldashanti.com,30041072,Backfill Engineer,249575983
+609,"Mohammed, Abdul Karim (Mechanical Technician - Process Plant)",Engineering,Abdul.Mohammed@aga.gold,30038794,Mechanical Technician - Process Plant, 
+610,"Mohammed, Basiru",Engineering,BMohammed@aga.gold,30034952,Mechanical Technician-Material Handling,+233  244037347
+611,"Mohammed, Nasiru",Engineering,NMohammed@aga.gold,30037169,Mechanical Technician - Winders, 
+612,"Morgan, Theodora",Processing,Tmorgan@aga.gold,30038712,Plant Opearator, 
+613,"Morrison, John Kwasi",Engineering,JKMorrison@aga.gold,30038385,CIC Technician, 
+614,"Morrison, Stephen Erskin",Engineering,SEMorrison@aga.gold,30043785,Electrical Technician,0246136985
+615,"Mottey, Frank",Engineering,FMottey@aga.gold,30036353,Maintenance Planning & Reliability Superintendent - KMS,0594003582
+616,"Mubarack, Salifu Adam",Engineering,SMubarack@aga.gold,30036250,Mechanical Technician-Shaft Maintenance, 
+617,"Musah, Mohammed",Geology,MMusah@aga.gold,30037167,Underground Technician, 
+618,"Nana Agyemang Ghansah, David",Capital Project,DGhansah@aga.gold,30043210,Graduate Engineer,0541751886
+619,"Nartey, Simon",Safety & Health,Simon.Nartey@aga.gold,30043828,Safety Officer - UG, 
+620,"Nasir, Amoak",Geology,Amoak.Nasir@aga.gold,30037068,Core Yard Technician, 
+621,nene otuteye,Shared Services,notuteye@aga.gold,30034795,Senior Manager: Digital Technology,+233 244 329827
+622,"Nibevula, Edith",Finance & Commercial,ENibevula@aga.gold,30039890,Accounts Payable Officer,0593804256
+623,"Nimako, Michael",Engineering,MNimako@aga.gold,30037263,CIC Technician - Process Plant, 
+624,"Nimoh, Smart",Engineering,SNimoh@aga.gold,30036261,Maintenance Planner Data Clerk,0593804195
+625,"Nkansah, Joshua",Mine Planning & Technical,Joshua.Nkansah@aga.gold,30045003,Graduate Trainee,0553213189
+626,"nketsiah, benjamin",Finance & Commercial,bnketsiah@aga.gold,30034841,Financial Accountant - Fixed Assets,0559863068
+627,"Nkrumah, Ezra",Finance & Commercial,Ezra.Nkrumah@aga.gold,30042916,Materials Planner,0243029243
+628,"Nkrumah, Stephen",Processing,SNkrumah@aga.gold,30037416,Plant Operator, 
+629,"Norman, Eric",Engineering,ENorman@aga.gold,30039068,Pump Mechanical Technician, 
+630,"Nsarkoh, Freda",Shared Services,FNsarkoh@aga.gold,30044543,Pupil,+233 277336824
+631,"Nsiah, Daniel Bediako",Geology,DNsiah@aga.gold,30035069,Senior Geologist - Exploration,0559709812
+632,"Nsiah, Gavis",Engineering,GNsiah@aga.gold,30036894,Electrical Supervisor - Process Plant,0596994472
+633,"Ntiakoh, Alberta",Safety & Health,ANtiakoh@aga.gold,30045021,Graduate Trainee,0540702738
+634,"Nti-Yeboah, Adinorta",Human Resources,ANti-Yeboah@aga.gold,30042528,HR Manager,0244479022
+635,"Nuamah, Ambrose",Engineering,ANuamah@aga.gold,30043791,Electrical Technician,0248304152
+636,"nunoo, james",Safety & Health,jnunoo@aga.gold,30034992,Fire and Rescue Officer, 
+637,"Nurubang, Emmanuel Diporo",Security,ENurubang@aga.gold,30042625,Security Supervisor - UG,0593988361
+638,"Nyame, Michael",Processing,MNyame@aga.gold,30039318,Plant Shift Sectional Lead,0596995335
+639,"Nyamekeh, Lazurus Eddie",Engineering,LNyamekeh@aga.gold,30037544,Lamp Room Attendant, 
+640,"Nyamekye, Emmanuel",Processing,ENyamekye@aga.gold,30038748,Plant Operator, 
+641,"Nyamekye, Stephen",Environment,SNyamekye@aga.gold,30047329,Graduate Trainee, 
+642,"Nyansah, James",Engineering,JNyansah@aga.gold,30037182,Mechanical Supervisor - Winders,0257997274
+643,"Nyante, Grace Kafui Bediaku",Mining,GKNyante@aga.gold,30042844,Control Room Engineer, 
+644,"nyarko, edward foster",Processing,enyarko@aga.gold,30034840,Metallurgical Superintendent,0501413357
+645,"Nyarko, Enoch Kwame",Processing,EKNyarko@aga.gold,30045036,Graduate Trainee, 
+646,"Nyarko, Kwame",Engineering,KNyarko@aga.gold,30037462,Mechanical Technician - STP/WTP/TSF, 
+647,"Nyarko, Philip",Capital Project,Philip.Nyarko@aga.gold,30042264,Mine Captain - Projects,0594035824
+648,"Nyarko, Veronica",Mine Planning & Technical,VNyarko@aga.gold,30045011,Graduate Trainee,0544568563
+649,"Nyoagbe, Philip",Processing,PNyoagbe@AngloGoldAshanti.com,30044043,Water Management Superintendent,+233 24 4972955
+650,"Obeng, Joseph",Mining,JObeng@aga.gold,30034836,Supervisor - Material Handling,0247965083
+651,"Obeng, Patrick Darko",Engineering,PDObeng@aga.gold,30043979,Mechanical Technician – PasteFill,0246586601
+652,"Obeng, Richard",Geology,Richard.Obeng@anglogoldashanti.com,30037083,Mapping Geologist, 
+653,"obeng, roland",Geology,robeng@AngloGoldAshanti.com,30034828,Specialist - Geoscience Database,0556768033
+654,"Oboro, Nana Yaw Adjei",Mining,NYAOboro@aga.gold,30045002,Graduate Trainee,0543143962
+655,"Obuobi, Peter",Safety & Health,PObuobi@aga.gold,30040700,Safety Officer - Underground, 
+656,"Ocrah, George",Engineering,GOcrah@aga.gold,30035051,Mechanical Technician-Surface Processing, 
+657,"Ocran, Samuel",Security,SOcran@aga.gold,30038489,Security Officer - CCTV (Systems Reviewer),0593841827
+658,"Odoom, Fiifi",Finance & Commercial,FOdoom@aga.gold,30036573,Cost Accountant,0531027441
+659,"oduro, edmund",Sustainability,eaoduro@aga.gold,30034846,Community Relations Manager,0556778182
+660,"Oduro, Richard",Digital Technology,ROduro@aga.gold,30043829,Lead: Information Management & Analytics,0593871865
+661,"Ofori, Ebenezer Mensah",Safety & Health,EMOfori@aga.gold,30044511,Safety Officer - Surface, 
+662,"Ofori, Joseph Kofi",Mining,JKOfori@aga.gold,30040215,Skip Handler,545433776
+663,"Ofori, Kingsford",Safety & Health,kofori@aga.gold,30045019,Graduate Trainee,0249256933
+664,"Ofori, Michael Kwaku",Finance & Commercial,MKOfori@aga.gold,30043933,Accounts Officer- Receivables, 
+665,"ofori, raymond",Engineering,rofori@aga.gold,30034960,Operator,+233  244840762
+666,"Ofori, Richmond",Engineering,ROfori2@aga.gold,30045278,Winder Instrumentation Technician, 
+667,"Ofori-Atta, Kelvin",Sustainability,KOfori-Atta@aga.gold,30043868,Economic Development Officer,0531011975
+668,"Ofosu, Randolph",Security,ROfosu@aga.gold,30035793,Security Superintendent - Technology,0552570778
+669,"Ofosu-Tenkorang, Frederick Kwame",Mining,FOTenkorang@aga.gold,30043833,Senior Manager - Mining,0244311483
+670,"Ogoe, George",Processing,GOgoe@aga.gold,30038344,Plant Operations Superintendent,0596913885
+671,"Ogyeabour, Kwame Fosu",Processing,KOgyeabour@aga.gold,30037075,Paste Plant Superintendent,0552863237
+672,"Ohene, Theophilus Opoku",Engineering,TOOhene@aga.gold,30042258,Electrical Superintendent – Process Plant,0593873263
+673,"Ohene, Yaw Adu",Finance & Commercial,YAOhene@aga.gold,30043783,Payroll Officer,0531006962
+674,"Ohene-Peprah, David",Mine Planning & Technical,DOhene-Peprah@aga.gold,30045008,Graduate Trainee,0553786545
+675,"Okai, Jackson K.",Processing,JKOkai@aga.gold,30034888,Senior Metallurgist - Projects,0596913883
+676,"Okai-Bonsu, Bright",Finance & Commercial,BOkai-Bonsu@aga.gold,30037709,Contracts Officer,0594003500
+677,"okyere, charles",Digital Technology,cokyere@aga.gold,30034865,Telecommunication Officer,0244324504
+678,"Okyne, Robert",Finance & Commercial,ROkyne@aga.gold,30042023,Tax Specialist,0559724226
+679,"oletey, moses tei-mensah",Engineering,moletey@aga.gold,30034878,Engineering Manager – Underground,0559863100
+680,"Omane, Philip",Engineering,POmane@aga.gold,30034913,Mechanical Technician - SMI,+233  244540455
+681,"Onuawonto, Ebenezer Sam",Finance & Commercial,EOnuawonto@aga.gold,30043364,Materials Planner, 
+682,"Opare, Michael Kwesi",Safety & Health,MOpare@aga.gold,30041618,Fire and Rescue Brigadesman, 
+683,"opoku ware, valentine",Sustainability,vopokuware@aga.gold,30035897,Stakeholder Engagement Officer,0559680692
+684,"Opoku, Afia Boatemaa Panyin",Geology,ABPOpoku@aga.gold,30045038,Graduate Trainee,2.33558E+11
+685,"Opoku, Charles Junior",Engineering,CJOpoku@aga.gold,30043490,Mechanical Technician - Lube, 
+686,"Opoku, Jephter",Processing,Jephter.Opoku@aga.gold,30037423,Control Room Lead, 
+687,"Opoku, John Kwabena",Engineering,JOpoku@aga.gold,30034905,Driver,+233  244625784
+688,"Opoku, Richard",Engineering,ROpoku@aga.gold,30034910,Auto Mechanical Technician,+233  244896691
+689,"Opoku, Richard (Contracts)",Finance & Commercial,Richard.Opoku@aga.gold,30035899,Contracts Officer,0593990456
+690,"Opoku, Samuel",Engineering,Samuel.Opoku@aga.gold,30040496,Mechanical Technician - SMI,0542538399
+691,"Opong, Ebenezer Asare",Processing,EAOpong@aga.gold,30035053,Plant Manager - Projects,0544325610
+692,"opong, joshua",Geology,jopong@aga.gold,30035021,Chief Geologist - Production,0559669946
+693,"opong, rachael wereko",Processing,rwopong@aga.gold,30034851,Senior Metallurgist,0501280299
+694,"Oppong, Bright",Engineering,Bright.Oppong@aga.gold,30043489,Mechanical Technician - Process Plant,243175019
+695,"Oppong, Emmanuel",Engineering,Emmanuel.Oppong@aga.gold,30045025,Graduate Trainee,0501405565
+696,"Oppong, Henry Westcort Kwesi",Mine Planning & Technical,HWOppong@anglogoldashanti.com,30042324,Senior Geotechnical Engineer,0531012800
+697,"Oppong, Isaac",Engineering,Isaac.Oppong@aga.gold,30039075,Mechanical Technician, 
+698,"Oppong, Isaac Koranteng",Engineering,IKOppong@aga.gold,30037163,Electrical Engineer - Electrical & Energy Management,  
+699,"Oppong, Louis",Engineering,LOppong@aga.gold,30037552,Forklift Operator, 
+700,"Oppong, Richard",Geology,ROppong@aga.gold,30037168,Underground Technician, 
+701,"Oppong-Mensah, Akua Konadu",Geology,AKOppong-Mensah@aga.gold,30044962,Graduate Trainee,2.33241E+11
+702,"Osae, Yaa Ntobea",Mining,YOsae@aga.gold,30037443,Control Room Engineer, 
+703,"osafo, francis",Project Services & BI,fosafo2@aga.gold,30034814,BI & Information Management Officer,0596913942
+704,"oscar, donkor",Processing,doscar@aga.gold,30034875,TSF Supervisor,0257997370
+705,"osei, ethel",Human Resources,edarkoh@aga.gold,30034844,Administrative Officer - Service,0501323248
+706,"osei, evans kwaku",Project Services & BI,eosei@aga.gold,30034825,Project and Capital Controller,0501412877
+707,"Osei, George",Capital Project,George.Osei@aga.gold,30042760,Senior HSE Officer,0257996490
+708,"Osei, Kwesi",Engineering,KOsei@aga.gold,30034914,Pipe Fitter, 
+709,"Osei, Mercy Oforiwaa",Mine Planning & Technical,MOOsei@aga.gold,30045006,Graduate Trainee,0541399278
+710,"Osei, Primilla",Capital Project,POsei@aga.gold,30045130,Mining Engineer-Projects, 
+711,"Osman, Baba",Processing,BOsman@aga.gold,30041885,Paste Plant Laboratory Technician / Sampler, 
+712,"Otabil, Eric Jojo Ago Kwei",Mine Planning & Technical,EOtabil@aga.gold,30041498,Survey Superintendent – Projects, 
+713,"Oti-Boateng, Williams",Safety & Health,WOti-Boateng@aga.gold,30042227,Contractor Safety and Training Specialist,0593888091
+714,"Otoo, Anthony",Engineering,AOtoo@aga.gold,30038647,CIC Supervisor - SMI,0246472651
+715,"otoo, jerry john",Safety & Health,jotoo@aga.gold,30034857,EMS Superintendent,0244419552
+716,"Otsin, David",Safety & Health,DOtsin@aga.gold,30037836,Fire Tender Driver, 
+717,"Otu, Prince Osei",Engineering,POOtu@aga.gold,30043980,Mechanical Technician – PasteFill,0591524926
+718,"Owusu Agyare, Emmanuel",Engineering,EOAgyare@aga.gold,30034988,Engineer - Legal & Compliance,0559705723
+719,"Owusu Ansah, Gabriel",Processing,goansah@aga.gold,30045034,Graduate Trainee,0558887946
+720,"Owusu, Benjamin",Engineering,Benjamin.Owusu@aga.gold,30042803,Engineering Superintendent - Reliability,0257955407
+721,"Owusu, Bright",Finance & Commercial,BOwusu@aga.gold,30036079,Warehouse Officer, 
+722,"Owusu, Bryan Ross",Engineering,BROwusu@aga.gold,30037433,Mechanical Supervisor - Pastefill,+23 3 541840144
+723,"Owusu, Elijah Addai",Engineering,EOwusu@aga.gold,30039566,Shaft Maintenance Technician, 
+724,"Owusu, Emmanuel Tylor",Engineering,ETOwusu@aga.gold,30043977,Mechanical Technician – PasteFill,0541260080
+725,"Owusu, Gabriel (UMMW)",Engineering,GOwusu@aga.gold,30035058,Welder - Shafts,+233  248314149
+726,"Owusu, Michael",Engineering,Michael.Owusu@aga.gold,30037666,Mechanical Technician, 
+727,"Owusu, Osei",Engineering,OOwusu@aga.gold,30034898,Electrical Technician - Cable Joints,+233  244111632
+728,"Owusu, Patrick",Engineering,Patrick.Owusu@aga.gold,30041161,Mechanical Technician - Winders, 
+729,"Owusu, Prince Sekyere",Supply Chain,PSekyere-Owusu@aga.gold,30035745,Contracts Officer,0559668075
+730,"Owusu-Adanse, Akwasi Adu Gyamfi",Engineering,AOwusu-Adanse@aga.gold,30037826,Mechanical Technician - TSF, 
+731,"Owusu-Adanse, Nana Yaw Nti",Engineering,NOwusu-Adanse@aga.gold,30037077,Engineering Manager - Process Plant,0552659407
+732,"Owusu-Afriyie, Albert",Mining,AOwusu-Afriyie@aga.gold,30042981,Control Room Engineer, 
+733,"Owusu-Ansah, George",Environment,GOwusu-Ansah@aga.gold,30042843,Senior Manager - Environment,0257957044
+734,"Owusu-kusi, Peter Fraizer",Finance & Commercial,POwusu-Kusi@aga.gold,30036345,Management Accountant - Process Plant,0559862893
+735,"Paddy, Isaac",Mining,IPaddy@aga.gold,30038482,Material Handler, 
+736,"Paha, Alfred Kojo",Shared Services,APaha@aga.gold,30041427,Administrative Officer - Legal,+233 203 231203
+737,"Paintsil, Patrick",Engineering,PPaintsil@aga.gold,30045275,Winder Electrical Technician, 
+738,Patrick Owusu Ansah,Shared Services,poansah@aga.gold,30034803,Senior Ports Officer,+233 249120871
+739,"Pentsil, Bernard  Eku",Security,BPentsil@aga.gold,30036259,Adminstrative Officer- Security,0559723394
+740,"Peprah, Antwi",Engineering,APeprah@aga.gold,30037517,Maintenance Planner - Surface,0594043541
+741,"Peprah, Kwame",Engineering,KwPeprah@aga.gold,30038509,UG Dewatering Operator, 
+742,Peter Crabbe,Shared Services,PCrabbe@aga.gold,30042229,Regional Manager: Learning & Capability,+233 244303440
+743,Petra Mensah Abosi,Shared Services,PMAbosi@aga.gold,30043363,Graduate Trainee,+233 557 632 582
+744,Philip Adadzie,Shared Services,PAdadzie@aga.gold,30034807,Manager : Taxation Ghana,+233 243677701
+745,"Pinto, Ronald Jose Veloz",Capital Project,RJVPinto@aga.gold,30037730,Senior Instrumentation Engineer,0552753223
+746,"Pobee, Michael Nana Afriyie",Sustainability,MNAPobee@aga.gold,N/A,Community Engagement Officer,0244089432
+747,"Pobee, Samuel B.",Management,SPobee@aga.gold,30046441,"Managing Director, Obuasi Mine",+233 59 3807587
+748,"Prah, Isaac",Engineering,IPrah@aga.gold,30038507,Pump Mechanical Technician, 
+749,"Prah, Nana Obeng",Project Services & BI,NOPrah@aga.gold,30043010,Business Improvement Specialist,  
+750,"Quaicoe, Edward Amoako",Geology,EAQuaicoe@aga.gold,30044970,Graduate Trainee,2.33203E+11
+751,"Quaicoe, Eric",Engineering,EQuaicoe@anglogoldashanti.com,30036351,Maintenance Planner Data Clerk, 
+752,"Quainoo, Phyllis",Human Resources,Phyllis.Quainoo@aga.gold,30042610,Training & Development Specialist,0594023536
+753,"Quansah, Cephas",Processing,Cquansah@aga.gold,30038716,Plant Operator, 
+754,"Quarcoo, Joseph",Engineering,JQuarcoo@aga.gold,30035046,Senior Maintenance Technician,+233  572983186
+755,"Quarshie, Douglas",Security,DQuarshie@aga.gold,30041060,Security Integrated Systems Technician,0593841835
+756,"Quarshie, Innocent Atsu",Finance & Commercial,IQuarshie@aga.gold,30037834,Contracts Officer,0594017831
+757,"Quarshie, Lucius Ted",Digital Technology,LQuarshie@aga.gold,30037973,IT Field Support Engineer,0593860029
+758,"Quashie, Thomas Sedem Kofi Fui",Finance & Commercial,Thomas.Quashie@aga.gold,30042624,Payroll Officer,0257960721
+759,"Quaye, Reuben",Engineering,RQuaye@aga.gold,30038545,CIC Supervisor - Surface,548816332
+760,"Razak, Mariama",Engineering,Mariama.Razak@aga.gold,30039892,Mechanical Technician - SMI, 
+761,Roberts. Edward Addo,Engineering,EARoberts@aga.gold,30039623,Mechanical Technician - Process Plant,0257957856
+762,"saaman, daniel",Finance & Commercial,daniel.saaman@aga.gold,30035794,Finance Superintendent - Projects,0552570777
+763,"Sackey, Samuel",Processing,SSackey@aga.gold,30037698,Control Room Lead, 
+764,"Sackey, Yaw Annor",Engineering,YASackey@aga.gold,30043568,CIC Technician - Process Plant, 
+765,"Saeed, Mohammed Tawfiq",Engineering,MSaeed@aga.gold,30038754,Mechanical Technician - Process Plant, 
+766,"Sagno, Keamou",Capital Project,keamou.sagno@aga.gold,30042751,Project Engineer,0257961794
+767,"Sagoe, Maxwell",Geology,MSagoe@aga.gold,30036214,Mapping Geologist, 
+768,"Sakyi, Ernest Addo",Security,easakyi@aga.gold,30035005,Security Supervisor - Operations,0556776884
+769,"Sakyi, Isaac",Engineering,Isaac.Sakyi@aga.gold,30042026,Mechanical Technician – Process Plant, 
+770,"Salifu, Abdul Jalil",Engineering,AJSalifu@aga.gold,30043978,Mechanical Technician, 
+771,"Salifu, Jibril",Engineering,JSalifu@aga.gold,30038492,Mechanical Supervisor - Pasterfill,0531033751
+772,"Samid, Mu-I-Zu Abdul",Geology,MSamid@aga.gold,30037514,Senior Geologist - Production, 
+773,Sampson Manu,Sustainability,smanu@aga.gold,30047280,Communication Officer,0241908029
+774,"Sampson, Derek Dornu Kwablah",Engineering,DSampson@aga.gold,30037464,Electrical Technician - Winders, 
+775,"Sarfo, Francis",Environment,FSarfo@aga.gold,30044442,Closure Manager,0531033017
+776,"Sarfo, Richard",Project Services & BI,RSarfo@aga.gold,30040488,Document Control Officer, 
+777,"Sarfo-Ansah, Romeo",Engineering,RSarfo-Ansah@aga.gold,30035055,Winder Engine Driver,+233  247456358
+778,"Sarpong, Albert",Mining,ASarpong@aga.gold,30044999,Graduate Trainee,0247177059
+779,"Sarpong, Deborah",Processing,DSarpong@aga.gold,30039388,Paste Plant Laboratory Technician / Sampler, 
+780,"Sarpong, Julius Dwomoh",Geology,JSarpong@aga.gold,30035067,Senior Geologist - Evaluation,+233  245282361
+781,"Sarpong, Lewis",Capital Project,LSarpong@aga.gold,30034897,HSE Superintendent - Projects,0241998956
+782,"Saskomah, James",Finance & Commercial,JSaskomah@aga.gold,30045042,Materials Engineer,+233 24 0569201
+783,"sasu, joseph",Mine Planning & Technical,jsasu@aga.gold,30035010,Technical Specialist - Survey,0244322036
+784,"Sebbeh, Frederick Nana",Engineering,FSebbeh@aga.gold,30036393,Senior Maintenance Planner - Process Plant,0594043305
+785,"Sedinam, Peace-Pearl",Engineering,PSedinam@aga.gold,30044607,UG Dewatering Operator, 
+786,"Seidu, Abdul Rahman",Engineering,ARSeidu@aga.gold,30039625,Mechanical Technician - Process Plant, 
+787,"Seidu, Issifu",Engineering,ISeidu@aga.gold,30034947,Electrical Technician-Winders,+233  247603636
+788,"Seidu, Mohammed",Safety & Health,Mohammed.Seidu@aga.gold,30043591,Occupational hygienist,+224 628 68 78 29
+789,"Sekyere, Kwadwo Marfo Owusu",Digital Technology,KMOSekyere@aga.gold,30047209,National Service Person,0249545987
+790,"Senyah, Kwame Brenyah",Capital Project,KBSenyah@aga.gold,30043624,Senior Mechanical Engineer,0593972322
+791,"Sewovi, Henry Johnson",Capital Project,HSewovi@aga.gold,30042257,Civil Engineer,0593973125
+792,"Shaibu, Adamu",Engineering,AShaibu@aga.gold,30038792,Mechanical Technician - Process Plant, 
+793,"Siaw, Erica Denkyiwaa",Processing,edsiaw@aga.gold,30045029,Graduate Trainee,0501404221
+794,"sogbey, richard",Engineering,rsogbey@aga.gold,30034996,Electrical Supervisor - Surface (HV),0559705782
+795,"Soglo, Philomena Salasi",Mine Planning & Technical,PSoglo@aga.gold,30047163,Graduate Trainee, 
+796,"Solibe, Ernest",Mining,ESolibe@aga.gold,30038484,Material Handler, 
+797,"Sonne, Nii Aleo",Processing,NSonne@aga.gold,30039070,Paste Plant Control Room Supervisor, 
+798,"Strong, Gary",Mining,GStrong@aga.gold,30035861,Senior Specialist - Mining Projects,0552571261
+799,"Sulemana, Sadat",Engineering,SSulemana@aga.gold,30037089,Pump Rebuild Technician, 
+800,"Sumaila, Moro",Engineering,MSumaila@aga.gold,30039076,Mechanical Technician - Material Handling, 
+801,"Suzar, Jonathan",Engineering,JSuzar@aga.gold,30043988,CIC Technician Paste Fill, 
+802,"Swanzy, Mabel",Capital Project,MSwanzy@aga.gold,30044977,Graduate Engineer,0545502699
+803,Sylvia Mbama,Shared Services,Smbama@aga.gold,30042228,HR Business Partner,+233 244282905
+804,"Tahiru , Alhassan",Engineering,ATahiru@aga.gold,30037831,Transport Officer,0593804261
+805,"Tandoh, Stephen Akwasi",Safety & Health,STandoh@aga.gold,30041174,Fire & Rescue Brigadesman, 
+806,"Tannoh, Eric",Engineering,ETannoh@aga.gold,30036605,Engineering Manager - Electrical & Instrumentation,0559729535
+807,"Tawiah, David Amprofi",Engineering,DTawiah@aga.gold,30039082,Contracts Specialist - Site Facilities Maintenance,0558508815
+808,"Tawiah, James",Finance & Commercial,JTawiah@aga.gold,30038648,Expeditor,0596913684
+809,"Tawiah, Jonathan",Security,Jonathan.Tawiah@aga.gold,30042682,Security Supervisor - UG,0257965038
+810,"Tawiah, Rashida",Shared Services,rtawiah@aga.gold,30047263,National Service Person,+233 240923821
+811,"Taylor, Isaac",Processing,Isaac.Taylor@aga.gold,30037450,Plant Operator, 
+812,"Taylor, Osmond Franklyn",Engineering,OTaylor@aga.gold,30042333,Engineering Superintendent - UG Dewatering,0593885024
+813,"tehero, paul",Engineering,ptehero@aga.gold,30034934,Mobile Crane Operator,+233  244672427
+814,"Tetteh, Derrick Kingsman",Engineering,Derick.Tetteh@aga.gold,30037801,Underground Dewatering Operator, 
+815,"Tetteh, Eva Aidoo Micah",Engineering,eamtetteh@aga.gold,30045016,Graduate Trainee,0559780663
+816,"Tetteh, Rexford",Engineering,RTetteh@aga.gold,30037378,Electrical Technician - Winders, 
+817,"Tettey, Lawrence Nii Armar",Security,LNATettey@aga.gold,30045646,Security Supervisor - Process Plant,0243855805
+818,"Tieku, Rita",Engineering,RTieku@aga.gold,30038542,Electrical Technician (LV) - SMI, 
+819,"tornu, francis",Engineering,ftornu@aga.gold,30034941,Mechanical Technician - SMI,+233  244076155
+820,"Trornu, Raymond",Geology,RTrornu@AngloGoldAshanti.com,30036339,Chief Geologist - Exploration,0559708711
+821,"Tuffour, Belinda",Geology,BTuffour@aga.gold,30036359,Mapping Geologist,0552686331
+822,"Tweneboah, Frema",Mining,Ftweneboah@aga.gold,30043705,Administrative Clerk - Mining,0593880171
+823,"Tweneboah, Richard",Engineering,RTweneboah@aga.gold,30037672,Mechanical Technician-Material Handling, 
+824,"Tweneboah, Solomon Ofosu",Engineering,SOTweneboah@aga.gold,30046935,Mechanical Supervisor - Process Plant, 
+825,"Twumasi, Abigail",Mining,ATwumasi@aga.gold,30037753,Weighbridge Attendant, 
+826,"Twumasi, Frank",Engineering,FTwumasi@aga.gold,30037536,CIC Technician - SMI, 
+827,"Vanderpuye, Leonard",Finance & Commercial,LVanderpuye@aga.gold,30036078,Warehouse Officer, 
+828,"Vigbedor, Slater Mawulolo",Capital Project,SMVigbedor@aga.gold,30045445,Project Control Room Superintendent,0246575617
+829,VMaharaj,Capital Project,VMaharaj@aga.gold,30041914,Project Director,0593840703
+830,"Wae, Louisa Fosuaah",Engineering,LFWae@aga.gold,30044988,Graduate Trainee,0541915763
+831,"Whyte, Charles Robert",Engineering,CWhyte@aga.gold,30039078,Rigger and Ropesman, 
+832,"Wiafe, Elizabeth Dansoa",Processing,edwiafe@aga.gold,30045028,Graduate Trainee,0549812691
+833,"Williams, Dominic Osei",Finance & Commercial,DOWilliams@aga.gold,30040477,Warehouse Officer,233  246793322
+834,"Wood, Victoria Nash",Shared Services,VNWood@aga.gold,30042154,Personal Assistant - Ghana/Tanzania BU,+233 593857404
+835,"Yamoah, William",Engineering,WYamoah@aga.gold,30037295,Winder Engine Driver, 
+836,"Yamson, Andrews Anlimah",Engineering,AYamson@aga.gold,30042246,Shaft Maintenance Technician, 
+837,"Yanful, Mohammed",Geology,MYanful@aga.gold,30042150,Senior Geologist - Production, 
+838,"Yankey, Elias Konos",Engineering,EKYankey@aga.gold,30043637,Mechanical Superintendent – Process Plant,0593970292
+839,"Yankey, Emmanuel (Obsi)",Capital Project,Emma.Yankey@aga.gold,30035449,Senior Project Planner,0559681747
+840,"Yankey, Naomi",Mine Planning & Technical,NYankey@aga.gold,30036702,Senior Ventilation Engineer, 
+841,"Yankey, Tracy Adwoa Sipa",Processing,TYankey@aga.gold,30043223,Graduate Trainee,0544864541
+842,"Yankholmes, Emmanuel Aidoo",Engineering,EYankholmes@aga.gold,30037467,Mechanical Technician - SMI, 
+843,"Yankson, Eric Kwabena Paha",Engineering,EYankson@aga.gold,30037833,Plant Engineer,0245976153
+844,"Yanney, Hannah",Mining,HYanney@aga.gold,30045000,Graduate Trainee,0249361774
+845,"Yawson, Francis",Geology,FYawson@aga.gold,30041882,Core Yard Technician, 
+846,"Yawson, Orlando Kojo",Engineering,OYawson@aga.gold,30036814,Engineering Supt.-Pastefil&Material Hand,0593862221
+847,"Yeboah, Alexander",Capital Project,Alexander.Yeboah@aga.gold,30042802,Mine Captain Projects,0257955399
+848,"Yeboah, Eric Omane",Human Resources,EYeboah@aga.gold,30039500,IR Officer,0559731678
+849,"Yeboah, Gyansah",Safety & Health,YYeboah@aga.gold,30037298,Fire and Rescue Brigadesman,0542085706
+850,"Yeboah, Irene",Geology,Irene.Yeboah@aga.gold,30036810,Material Dispatcher, 
+851,"Yeboah, Jacqueline Nyarko",Mine Planning & Technical,JYeboah@aga.gold,30037391,Mine Planning Engineer, 
+852,"Yeboah, John Kwabena",Mining,JKYeboah@aga.gold,30038327,Mine Captain – Operations,0247967466
+853,"Yeboah, Patrick Asare",Engineering,PYeboah@aga.gold,30037928,Electrical Supervisor - Process Plant,0596994473
+854,"Yenzu, Paul Amihere",Processing,PYenzu@aga.gold,30042232,Plant Manager – Operations,0593861795
+855,"Yirenkyi, Sylvester",Engineering,SYirenkyi@aga.gold,30040230,Mechanical Technician - HME, 
+856,"Zakari, Ibrahim",Engineering,IZakari@aga.gold,30047158,Graduate Trainee,0540901142
+857,"Zakari, Rashid Abdul",Digital Technology,RAZakari@aga.gold,30047269,National Service Person,0550705394
+858,"Zakari,Yahaya",Engineering,zyahaya@aga.gold,30044423,CIC Technician,  024475813
+859,"Zogbede, Prince",Engineering,PZogbede@aga.gold,30036568,Laboratory Technologist, 
+860,"Zuotaa, Julius",Mine Planning & Technical,JZuotaa@aga.gold,30044014,Senior Surveyor, 
