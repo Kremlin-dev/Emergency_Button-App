@@ -328,3 +328,4 @@ def get_company_employees(request, company_code):
         return JsonResponse({"employees": employees}, status=200)
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
+
