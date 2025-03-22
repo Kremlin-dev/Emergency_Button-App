@@ -124,7 +124,6 @@ class LocationHandler:
             logger.error(f"Error in report_emergency: {str(e)}", exc_info=True)
             return {"error": f"Error reporting emergency: {str(e)}", "reqState": False}
 
-# Polling Workaround
 def poll_firebase_to_mongo():
     print("Starting Firebase polling thread...")
     ref = firebase_db.reference("emergencies")
@@ -138,7 +137,7 @@ def poll_firebase_to_mongo():
 
             for emergency_id, fb_data in firebase_data.items():
                 if not isinstance(fb_data, dict):
-                    print(f"⚠ Invalid data for {emergency_id}: {fb_data}")
+                    print(f"Invalid data for {emergency_id}: {fb_data}")
                     continue
 
                 mongo_doc = emergency_collection.find_one({"emergencyId": emergency_id})

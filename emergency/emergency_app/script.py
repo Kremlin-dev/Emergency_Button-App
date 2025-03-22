@@ -8,7 +8,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 # Reference to the emergency
-emergency_id = "636442"  # Replace with your emergencyId from Postman
+emergency_id = "402856"  # Replace with your emergencyId from Postman
 ref = db.reference(f"emergencies/{emergency_id}")
 
 # Update status
