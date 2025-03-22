@@ -1,8 +1,9 @@
+# emergency_app/firebase_config.py
 import firebase_admin
 from firebase_admin import credentials, db
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FIREBASE_CRED_PATH = os.path.join(BASE_DIR, "emergencytrackingapp-firebase-adminsdk-fbsvc-48daf7066c.json")
 
 if not firebase_admin._apps:
@@ -11,4 +12,5 @@ if not firebase_admin._apps:
         'databaseURL': 'https://emergencytrackingapp-default-rtdb.firebaseio.com/'
     })
 
-firebase_db = db
+# Export the initialized db service
+firebase_db = firebase_admin.db

@@ -156,9 +156,7 @@ def login(request):
 
 #REPORT EMERGENCY
 @csrf_exempt
-# @jwt_required  
 def report_emergency(request):
-    
     if request.method == "POST":
         try:
             data = json.loads(request.body)
@@ -173,8 +171,7 @@ def report_emergency(request):
                 return JsonResponse({"error": "Missing required fields"}, status=400)
 
             response = LocationHandler.report_emergency(
-                employee_id, company_code, latitude, longitude, accuracy, category
-            )
+                employee_id, company_code, latitude, longitude, accuracy, category)
             return JsonResponse(response, status=200 if "success" in response else 400)
 
         except json.JSONDecodeError:
@@ -182,9 +179,6 @@ def report_emergency(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
-
-#UPDATE EMERGENCY STATUS
-@csrf_exempt
 @csrf_exempt
 @admin_required
 def update_emergency_status(request):
