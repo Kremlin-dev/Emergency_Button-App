@@ -1,42 +1,83 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Loader from "@/components/molecule/Loader";
 import { useRouter } from "next/navigation";
-import Breadcrumb from "@/components/molecule/Breadcrumb";
-import { EmployeeProps } from "@/types";
 import { EmployeeTable } from "@/components/organism/EmployeeTable";
 import { columns } from "@/components/organism/EmployeeCulomn";
-import { employeeList } from "@/data";
-import Loader from "@/components/molecule/Loader";
 
-const Employees = () => {
+interface Employee {
+  employeeId: string;
+  name: string;
+  email: string;
+  department: string;
+  jobTitle: string;
+  phone: string | null;
+  registered: boolean;
+}
+
+const EmployeesPage = () => {
+  const [employees, setEmployees] = useState<Employee[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [hello, setHello] = useState<any>(null); 
   const router = useRouter();
-  const [user, setUser] = useState<{ role: string; department: string } | null>(null);
-  const [data, setData] = useState<EmployeeProps[]>([]);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+    const fetchEmployees = async () => {
+      try {
+        const companyCode = localStorage.getItem("companyCode");
+        if (!companyCode) throw new Error("Company code not found. Redirecting...");
 
-    if (!storedUser) {
-      router.push("/login"); 
-    } else {
-      const parsedUser = JSON.parse(storedUser);
-      setUser(parsedUser);
-      setData(employeeList.filter(emp => emp.department === parsedUser.department)); 
-    }
+        const response = await fetch(`https://kremlin.pythonanywhere.com/company-employees/${companyCode}/`);
+
+        if (!response.ok) throw new Error("Failed to fetch employees");
+
+        let text = await response.text();
+        console.log("Raw API Response (Text):", text);
+
+        text = text.replace(/NaN/g, "null");
+
+        const data = JSON.parse(text);
+        console.log("Parsed API Response (JSON):", data);
+
+        setHello(data);
+
+        if (!data.employees || !Array.isArray(data.employees)) {
+          throw new Error("Invalid data format received");
+        }
+
+        const formattedEmployees = data.employees.map((emp: any) => ({
+          ...emp,
+          phone: typeof emp.phone === "string" && emp.phone.trim() !== "" ? emp.phone : "N/A",
+        }));
+
+        setEmployees(formattedEmployees);
+      } catch (err: any) {
+        console.error("Error fetching employees:", err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEmployees();
   }, [router]);
 
-  if (!user) return <Loader/>
+  useEffect(() => {
+    console.log("Updated Hello State:", hello);
+  }, [hello]);
+
+  if (loading) return <Loader />;
+  if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <div className="p-4 bg-black/5">
-      <Breadcrumb />
-      <div className="h-[1px] w-full bg-gray-200"></div>
-      <main className="container mx-auto py-4">
-        <EmployeeTable columns={columns} data={data} />
-      </main>
-    </div>
+    <main className="p-4 bg-black/5">
+     <section className="p-4">
+      <EmployeeTable data={employees} columns={columns}/>
+     </section>
+    </main>
   );
 };
 
-export default Employees;
+export default EmployeesPage;

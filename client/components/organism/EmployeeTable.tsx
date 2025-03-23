@@ -56,12 +56,12 @@ export function EmployeeTable<TData, TValue>({
       <section className="flex items-center justify-between">
         <div className="flex items-center py-4">
           <Input
-            placeholder="Filter names..."
+            placeholder="Search employee by name..."
             value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
               table.getColumn("name")?.setFilterValue(event.target.value)
             }
-            className="max-w-sm"
+            className="max-w-sm"  
           />
         </div>
         <Sheet>

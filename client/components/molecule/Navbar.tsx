@@ -1,13 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Text from "../atom/Text";
 import Media from "../atom/Media";
 import { MdEmergency, MdAnalytics, MdPeople } from "react-icons/md";
 import { FaUser, FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const userData = localStorage.getItem("companyCode");
+    setIsAuthenticated(!!userData);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("companyCode");
+    setIsAuthenticated(false);
+    router.push("/login");
+  };
 
   return (
     <nav className="relative bg-gray-800 text-white p-4">
@@ -21,15 +36,22 @@ const Navbar = () => {
           <Media text="Analytics" link="analytics">
             <MdAnalytics size={24} />
           </Media>
-          {/* <Media text="Employees" link="employees">
-            <MdPeople size={24} />
-          </Media> */}
+          {isAuthenticated && (
+            <Media text="Employees" link="employees">
+              <MdPeople size={24} />
+            </Media>
+          )}
         </div>
 
-        <div className="hidden md:flex items-center space-x-2 cursor-pointer">
-          <FaUser size={24} />
-          <Text>Isaac Amponsah</Text>
-        </div>
+        {isAuthenticated ? (
+          <button onClick={handleLogout} className="hidden md:flex items-center space-x-2 cursor-pointer">
+            Logout
+          </button>
+        ) : (
+          <Link href="/login" className="hidden md:flex items-center space-x-2 cursor-pointer">
+            <button>Login</button>
+          </Link>
+        )}
 
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -50,13 +72,11 @@ const Navbar = () => {
           <Media text="Analytics" link="analytics">
             <MdAnalytics size={24} />
           </Media>
-          <Media text="Employees" link="employees">
-            <MdPeople size={24} />
-          </Media>
-          <div className="flex items-center space-x-2 cursor-pointer text-white hover:text-blue-400 transition-colors duration-200">
-            <FaUser size={24} />
-            <Text>Isaac Amponsah</Text>
-          </div>
+          {isAuthenticated && (
+            <Media text="Employees" link="employees">
+              <MdPeople size={24} />
+            </Media>
+          )}
         </div>
       </div>
     </nav>
