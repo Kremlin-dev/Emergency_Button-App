@@ -3,7 +3,7 @@ venv/
 
 # Python scripts (if you really want to ignore them)
 insert.py
-db_connection.py
+*.db_connection.py
 
 # CSV data file
 AGADBCSVo.csv
@@ -19,3 +19,10 @@ node_modules/
 *.pyc
 __pycache__/
 *.log
+# Ignore Firebase JSON
+emergencytrackingapp-firebase-adminsdk-*.json
+
+# Ignore test files
+*.test_firebase.py
+
+firebase_config.py
