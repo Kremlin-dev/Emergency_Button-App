@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+
+# Python scripts (if you really want to ignore them)
+insert.py
+db_connection.py
+
+# CSV data file
+AGADBCSVo.csv
+
+# Next.js and Node.js
+.next/
+node_modules/
+
+# Environment files
+*.env
+
+# Additional common ignores (optional)
+*.pyc
+__pycache__/
+*.log
+
+# Ignore Firebase JSON
+emergencytrackingapp-firebase-adminsdk-*.json
+
+# Ignore test files
+*.test_firebase.py
+db_connection.py

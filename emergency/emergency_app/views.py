@@ -179,65 +179,65 @@ def report_emergency(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
-@csrf_exempt
-@admin_required
-def update_emergency_status(request):
-    if request.method == "POST":
-        try:
-            data = json.loads(request.body)
-            emergency_id = data.get("emergencyId")
-            status = data.get("status")
+# @csrf_exempt
+# @admin_required
+# def update_emergency_status(request):
+#     if request.method == "POST":
+#         try:
+#             data = json.loads(request.body)
+#             emergency_id = data.get("emergencyId")
+#             status = data.get("status")
 
-            if not emergency_id or status not in ["active", "resolved"]:
-                return JsonResponse({"error": "Missing emergencyId or invalid status"}, status=400)
+#             if not emergency_id or status not in ["active", "resolved"]:
+#                 return JsonResponse({"error": "Missing emergencyId or invalid status"}, status=400)
 
-            response = LocationHandler.update_emergency_status(emergency_id, status)
-            return JsonResponse(response, status=200 if "success" in response else 400)
+#             response = LocationHandler.update_emergency_status(emergency_id, status)
+#             return JsonResponse(response, status=200 if "success" in response else 400)
 
-        except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON data"}, status=400)
+#         except json.JSONDecodeError:
+#             return JsonResponse({"error": "Invalid JSON data"}, status=400)
 
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+#     return JsonResponse({"error": "Invalid request method"}, status=405)
 
 ############
-# ADD WORK NOTES
-@csrf_exempt
-def add_work_note(request):
-    if request.method == "POST":
-        try:
-            data = json.loads(request.body)
-            emergency_id = data.get("emergencyId")
-            note = data.get("note")
+# # ADD WORK NOTES
+# @csrf_exempt
+# def add_work_note(request):
+#     if request.method == "POST":
+#         try:
+#             data = json.loads(request.body)
+#             emergency_id = data.get("emergencyId")
+#             note = data.get("note")
 
-            if not emergency_id or not note:
-                return JsonResponse({"error": "Missing emergencyId or note"}, status=400)
+#             if not emergency_id or not note:
+#                 return JsonResponse({"error": "Missing emergencyId or note"}, status=400)
 
-            work_note = {
-                "note": note,
-                "timestamp": datetime.utcnow().isoformat()
-            }
+#             work_note = {
+#                 "note": note,
+#                 "timestamp": datetime.utcnow().isoformat()
+#             }
 
-            emergency_collection.update_one(
-                {"emergencyId": emergency_id},
-                {"$push": {"workNotes": {"$each": [work_note], "$position": 0}}}
-            )
+#             emergency_collection.update_one(
+#                 {"emergencyId": emergency_id},
+#                 {"$push": {"workNotes": {"$each": [work_note], "$position": 0}}}
+#             )
 
-            updated_emergency = emergency_collection.find_one(
-                {"emergencyId": emergency_id}, {"workNotes": 1, "_id": 0}
-            )
+#             updated_emergency = emergency_collection.find_one(
+#                 {"emergencyId": emergency_id}, {"workNotes": 1, "_id": 0}
+#             )
 
-            return JsonResponse({
-                "success": "Work note added successfully",
-                "workNotes": updated_emergency.get("workNotes", [])
-            }, status=200)
+#             return JsonResponse({
+#                 "success": "Work note added successfully",
+#                 "workNotes": updated_emergency.get("workNotes", [])
+#             }, status=200)
 
-        except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON data"}, status=400)
+#         except json.JSONDecodeError:
+#             return JsonResponse({"error": "Invalid JSON data"}, status=400)
 
-        except Exception as e:
-            return JsonResponse({"error": str(e)}, status=500)
+#         except Exception as e:
+#             return JsonResponse({"error": str(e)}, status=500)
 
-    return JsonResponse({"error": "Invalid request method"}, status=405)
+#     return JsonResponse({"error": "Invalid request method"}, status=405)
 
 # RESET PASSWORD
 @csrf_exempt
@@ -300,7 +300,7 @@ def admin_login(request):
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
 
-@admin_required
+# @admin_required
 def get_company_employees(request, company_code):
     if request.method == "GET":
         company = company_collection.find_one(
@@ -322,4 +322,5 @@ def get_company_employees(request, company_code):
         return JsonResponse({"employees": employees}, status=200)
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
+
 
