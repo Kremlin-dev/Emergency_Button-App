@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Text from "../atom/Text";
 import Media from "../atom/Media";
 import { MdEmergency, MdAnalytics, MdPeople } from "react-icons/md";
-import { FaUser, FaBars, FaTimes } from "react-icons/fa";
+import {  FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

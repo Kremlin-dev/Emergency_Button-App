@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Loader from "../Loader";
 
 const withAuth = <P extends object>(WrappedComponent: React.ComponentType<P>) => {
-  return (props: P) => {
+  const AuthenticatedComponent = (props: P) => {
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
     const router = useRouter();
 
@@ -25,6 +25,10 @@ const withAuth = <P extends object>(WrappedComponent: React.ComponentType<P>) =>
 
     return <WrappedComponent {...props} />;
   };
+
+  AuthenticatedComponent.displayName = `withAuth(${WrappedComponent.displayName || WrappedComponent.name || "Component"})`;
+
+  return AuthenticatedComponent;
 };
 
 export default withAuth;
