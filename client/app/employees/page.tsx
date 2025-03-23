@@ -20,7 +20,6 @@ const EmployeesPage = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [hello, setHello] = useState<any>(null); 
   const router = useRouter();
 
   useEffect(() => {
@@ -34,14 +33,11 @@ const EmployeesPage = () => {
         if (!response.ok) throw new Error("Failed to fetch employees");
 
         let text = await response.text();
-        console.log("Raw API Response (Text):", text);
 
         text = text.replace(/NaN/g, "null");
 
         const data = JSON.parse(text);
-        console.log("Parsed API Response (JSON):", data);
 
-        setHello(data);
 
         if (!data.employees || !Array.isArray(data.employees)) {
           throw new Error("Invalid data format received");
@@ -64,9 +60,7 @@ const EmployeesPage = () => {
     fetchEmployees();
   }, [router]);
 
-  useEffect(() => {
-    console.log("Updated Hello State:", hello);
-  }, [hello]);
+
 
   if (loading) return <Loader />;
   if (error) return <p className="text-red-500">{error}</p>;

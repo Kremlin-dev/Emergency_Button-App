@@ -52,6 +52,7 @@ export default function EmergencyMap() {
     return () => off(emergenciesRef, "value", unsubscribe);
   }, []);
 
+  console.log(emergencies, "emergencies")
 
   return (
     <div className="h-screen w-full relative">
