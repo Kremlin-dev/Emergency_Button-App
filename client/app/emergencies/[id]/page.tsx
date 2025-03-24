@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { database } from "@/config/firebaseConfig";
-import { ref, onValue, off } from "firebase/database";
+import { ref, onValue, off, update } from "firebase/database";
 import { Emergency } from "@/types";
 import Loader from "@/components/molecule/Loader";
 
@@ -29,7 +29,13 @@ const EmergencyId = () => {
     const emergencyRef = ref(database, `emergencies/${id}`);
     const unsubscribe = onValue(emergencyRef, (snapshot) => {
       if (snapshot.exists()) {
-        setIncident({ id, ...snapshot.val() });
+        const data = snapshot.val();
+        setIncident({ id, ...data });
+
+        if (data.work_notes) {
+          setActionsList(data.work_notes);
+          localStorage.setItem(`actions-${id}`, JSON.stringify(data.work_notes));
+        }
       } else {
         router.push("/404");
       }
@@ -39,15 +45,39 @@ const EmergencyId = () => {
     return () => off(emergencyRef, "value", unsubscribe);
   }, [id, router]);
 
-  const handleAddAction = () => {
+  const handleAddAction = async () => {
     if (action.trim() === "") return;
+
     const updatedActions = [...actionsList, action];
     setActionsList(updatedActions);
     localStorage.setItem(`actions-${id}`, JSON.stringify(updatedActions));
-    setAction("");
+
+    try {
+      await update(ref(database, `emergencies/${id}`), {
+        work_notes: updatedActions,
+      });
+
+      setAction("");
+    } catch (error) {
+      console.error("Error updating work notes:", error);
+    }
   };
 
-  if (loading) return <Loader/>;
+  const handleStatusChange = async (newStatus: string) => {
+    if (!incident) return;
+
+    try {
+      await update(ref(database, `emergencies/${id}`), {
+        status: newStatus,
+      });
+
+      setIncident((prev) => (prev ? { ...prev, status: newStatus } : prev));
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
+  };
+
+  if (loading) return <Loader />;
   if (!incident) return <p>Emergency not found</p>;
 
   return (
@@ -55,9 +85,7 @@ const EmergencyId = () => {
       <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded-lg shadow-md">
         <h2 className="text-xl font-bold mb-4">Emergency Details</h2>
 
-        <label className="block text-sm font-semibold text-gray-500">
-          Category:
-        </label>
+        <label className="block text-sm font-semibold text-gray-500">Category:</label>
         <input
           type="text"
           value={incident.category || "N/A"}
@@ -65,17 +93,18 @@ const EmergencyId = () => {
           className="w-full px-3 py-2 mb-3 border border-gray-300 rounded-md bg-gray-200"
         />
 
-        <label className="block text-sm font-semibold text-gray-500">
-          Status:
-        </label>
-        <input
-          type="text"
+        <label className="block text-sm font-semibold text-gray-500">Status:</label>
+        <select
           value={incident.status || "Unknown"}
-          readOnly
-          className="w-full px-3 py-2 mb-3 border border-gray-300 rounded-md bg-gray-200 outline-none"
-        />
+          onChange={(e) => handleStatusChange(e.target.value)}
+          className="w-full px-3 py-2 mb-3 border border-gray-300 rounded-md bg-white outline-none"
+        >
+          <option value="active">Active</option>
+          <option value="resolved">Resolved</option>
+          <option value="ongoing">Ongoing</option>
+        </select>
 
-        <div className="">
+        <div>
           <h2 className="text-lg font-bold mb-2">Actions Taken</h2>
           <div className="flex gap-2">
             <input
@@ -95,7 +124,7 @@ const EmergencyId = () => {
 
           <ul className="mt-4 space-y-2">
             {actionsList.map((act, index) => (
-              <li key={index} className="">
+              <li key={index} className="text-gray-800 bg-white p-2 rounded-md shadow">
                 {act}
               </li>
             ))}
@@ -118,9 +147,7 @@ const EmergencyId = () => {
             loading="lazy"
           ></iframe>
         ) : (
-          <p className="text-red-500">
-            No location data available for this emergency.
-          </p>
+          <p className="text-red-500">No location data available for this emergency.</p>
         )}
       </div>
     </main>

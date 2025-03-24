@@ -12,7 +12,7 @@ import { Emergency } from "@/types";
 const createIcon = (color: string) =>
   new L.Icon({
     iconUrl: `/${color}-marker.png`,
-    iconSize: [32, 32],
+    iconSize: [50, 50],
     iconAnchor: [16, 32],
     popupAnchor: [0, -30],
   });
@@ -85,7 +85,7 @@ export default function EmergencyMap() {
                     <p className="font-bold">{incident.companyName}</p>
                     <p>Category: {incident.category}</p>
                     <p>Phone: {incident.phone}</p>
-                    <p>Status: {incident.status}</p>
+                    <p>Status: {incident.status === "" ? "Active" : incident.status}</p>
                   </div>
                 </Popup>
               </Marker>
