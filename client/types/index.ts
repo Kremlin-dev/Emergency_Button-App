@@ -1,10 +1,4 @@
-export interface EmergenciesProps {
-  emergencyId: number;
-  employeeId: string;
-  category: string;
-  status: "Resolved" | "Pending" | "Ongoing"
-  dateCreated: string;
-}
+
 
 export interface EmployeeProps {
   employeeId: string;
@@ -18,6 +12,9 @@ type Location = {
   lat: number;
   lng: number;
 };
+type WorkNotes = {
+  note: string;
+}
 
 export type Emergency = {
   id: string;
@@ -27,6 +24,7 @@ export type Emergency = {
   emergencyId: string;
   employeeId: string;
   location: Location;
+  work_notes: WorkNotes[];
   phone: string;
   status: string;
   _id: string;

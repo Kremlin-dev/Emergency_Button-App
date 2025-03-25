@@ -1,11 +1,11 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { EmergenciesProps } from "@/types";
 import { Checkbox } from "@/components/ui/checkbox";
 import { GoDotFill } from "react-icons/go";
+import { Emergency } from "@/types";
 
-export const columns: ColumnDef<EmergenciesProps>[] = [
+export const columns: ColumnDef<Emergency>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -43,39 +43,20 @@ export const columns: ColumnDef<EmergenciesProps>[] = [
   {
     accessorKey: "status",
     header: "Status",
-    cell: ({ getValue }) => {
-      const status = (getValue() as string) || "";
-      let bgColor = "";
-      let textColor = "";
-
-      switch (status.toLowerCase()) {
-        case "resolved":
-          bgColor = "bg-green-100";
-          textColor = "text-green-800";
-          break;
-        case "pending":
-          bgColor = "bg-red-100";
-          textColor = "text-red-800";
-          break;
-        case "ongoing":
-          bgColor = "bg-yellow-100";
-          textColor = "text-yellow-800";
-          break;
-        default:
-          bgColor = "bg-gray-100";
-          textColor = "text-gray-800";
-      }
-
-      return (
-        <div className={`px-2 inline-flex text-xs leading-5 items-center gap-1 font-semibold rounded-sm py-1 ${bgColor} ${textColor}`}>
-          <GoDotFill className={`${textColor}`} />
-          <p>{status}</p>
-        </div>
-      );
-    },
+    cell: () => (
+      <div className="px-2 inline-flex text-xs leading-5 items-center gap-1 font-semibold rounded-sm py-1 bg-green-100 text-green-800">
+        <GoDotFill className="text-green-800" />
+        <p>Resolved</p>
+      </div>
+    ),
   },
   {
-    accessorKey: "dateCreated",
+    accessorKey: "createdAt",
     header: "Date Created",
+    cell: ({ getValue }) => {
+      const rawDate = getValue() as string;
+      const formattedDate = new Date(rawDate).toISOString().split("T")[0];
+      return <span>{formattedDate}</span>;
+    },
   },
 ];

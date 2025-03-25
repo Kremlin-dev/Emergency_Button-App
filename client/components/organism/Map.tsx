@@ -39,12 +39,12 @@ export default function EmergencyMap() {
 
       const data = snapshot.val();
 
-      const formattedEmergencies: Emergency[] = Object.entries(data).map(
-        ([emergencyId, details]: any) => ({
+      const formattedEmergencies: Emergency[] = Object.entries(data)
+        .map(([emergencyId, details]: any) => ({
           id: emergencyId,
           ...details,
-        })
-      );
+        }))
+        .filter((incident) => incident.status?.toLowerCase() !== "resolved"); 
 
       setEmergencies(formattedEmergencies);
     });
@@ -52,7 +52,7 @@ export default function EmergencyMap() {
     return () => off(emergenciesRef, "value", unsubscribe);
   }, []);
 
-  console.log(emergencies, "emergencies")
+  console.log(emergencies, "Active emergencies"); 
 
   return (
     <div className="h-screen w-full relative">
@@ -67,33 +67,26 @@ export default function EmergencyMap() {
           if (!incident.location?.lat || !incident.location?.lng) return null;
 
           return (
-            <div key={incident._id}>
-              <Marker
-                key={incident.emergencyId}
-                position={[incident.location?.lat, incident.location?.lng]}
-                icon={createIcon(
-                  categoryColors[incident.category?.trim()] || "blue"
-                )}
-              >
-                <Popup>
-                  <div
-                    onClick={() =>
-                      router.push(`/emergencies/${incident?.emergencyId}`)
-                    }
-                    className="text-sm cursor-pointer"
-                  >
-                    <p className="font-bold">{incident.companyName}</p>
-                    <p>Category: {incident.category}</p>
-                    <p>Phone: {incident.phone}</p>
-                    <p>Status: {incident.status === "" ? "Active" : incident.status}</p>
-                  </div>
-                </Popup>
-              </Marker>
-            </div>
+            <Marker
+              key={incident.id}
+              position={[incident.location.lat, incident.location.lng]}
+              icon={createIcon(categoryColors[incident.category?.trim()] || "blue")}
+            >
+              <Popup>
+                <div
+                  onClick={() => router.push(`/emergencies/${incident.id}`)}
+                  className="text-sm cursor-pointer"
+                >
+                  <p className="font-bold">{incident.companyName}</p>
+                  <p>Category: {incident.category}</p>
+                  <p>Phone: {incident.phone}</p>
+                  <p>Status: {incident.status === "" ? "Active" : incident.status}</p>
+                </div>
+              </Popup>
+            </Marker>
           );
         })}
-      </MapContainer> 
-
+      </MapContainer>
     </div>
   );
 }

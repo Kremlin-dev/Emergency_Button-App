@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Text from "../atom/Text";
 import Media from "../atom/Media";
 import { MdEmergency, MdAnalytics, MdPeople } from "react-icons/md";
 import {  FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { AiFillHome } from "react-icons/ai";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
@@ -27,9 +27,12 @@ const Navbar = () => {
   return (
     <nav className="relative bg-gray-800 text-white p-4">
       <div className="flex justify-between items-center">
-        <Text>Logo</Text>
+        <Link href="/" className="text-2xl font-bold cursor-pointer">Logo</Link>
 
         <div className="hidden md:flex space-x-4">
+        <Media text="Home" link="">
+            <AiFillHome size={24} />
+          </Media>
           <Media text="Emergencies" link="emergencies">
             <MdEmergency size={24} />
           </Media>
@@ -66,6 +69,9 @@ const Navbar = () => {
         } origin-top`}
       >
         <div className="mt-4 flex flex-col gap-y-1 space-y-2 rounded-md">
+        <Media text="Home" link="">
+            <AiFillHome size={24} />
+          </Media>
           <Media text="Emergencies" link="emergencies">
             <MdEmergency size={24} />
           </Media>

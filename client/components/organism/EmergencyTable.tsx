@@ -21,15 +21,14 @@ import { Button } from "../ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { IoTimeOutline } from "react-icons/io5";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
 
-export function DataTable<
-  TData extends { emergencyId: number; employeeId: string },
+export function EmergencyTable<
+  TData extends { emergencyId: string; employeeId: string },
   TValue
 >({ columns, data }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -66,9 +65,7 @@ export function DataTable<
           />
         </div>
 
-        <div className="bg-white p-2 shadow-md">
-          <IoTimeOutline className="text-bold cursor-pointer" />
-        </div>
+      
       </section>
 
       <div className="rounded-md border cursor-pointer">
